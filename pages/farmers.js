@@ -99,12 +99,12 @@ const Farmers = () => {
                 </p>
                 <div className="circle-counter">
                   <div className="team-skill-item">
-                    <ProgressBar color={"#76a713"} value={"76"} />
+                    <ProgressBar color={"#FDDC1A"} value={"76"} />
                     <h4>Agriculture and Farming</h4>
                   </div>
                   <div className="team-skill-item">
                     <ProgressBar
-                      color={"#ff7800"}
+                      color={"#00A3E0"}
                       value={"83"}
                       extraCls={"two"}
                     />

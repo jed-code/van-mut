@@ -43,7 +43,8 @@ const SearchBtn = () => {
 };
 const DaskTopMenu = () => (
   <ul className="navigation clearfix d-none d-lg-flex">
-    <li className="dropdown">
+    <Home />
+    {/* <li className="dropdown">
       <a href="#">Home</a>
       <ul>
         <Home />
@@ -51,7 +52,7 @@ const DaskTopMenu = () => (
       <div className="dropdown-btn">
         <span className="fas fa-chevron-down" />
       </div>
-    </li>
+    </li> */}
     <li className="dropdown">
       <a href="#">pages</a>
       <ul>
@@ -450,26 +451,31 @@ const Header2 = () => (
     {/*End Header Upper*/}
   </header>
 );
+
+// customize top header
 const Header3 = () => (
   <header className="main-header header-three menu-absolute">
-    <div className="header-top-wrap bgc-primary py-10">
-      <div className="container-fluid">
+    <div
+      className="header-top-wrap bgc-primary py-10"
+      style={{ backgroundColor: "#00A3E0" }}
+    >
+      {/* <div className="container-fluid">
         <div className="header-top px-0">
           <ul>
-            <li>25% OFF Upcoming Product</li>
-            <li>100% Fresh &amp; natural foods</li>
-            <li>free shipping over $99</li>
-            <li>money back guarantee</li>
-            <li>cash on delivery</li>
+            <li style={{ color: "white" }}>25% OFF Upcoming Product</li>
+            <li style={{ color: "white" }}>100% Fresh &amp; natural foods</li>
+            <li style={{ color: "white" }}>free shipping over $99</li>
+            <li style={{ color: "white" }}>money back guarantee</li>
+            <li style={{ color: "white" }}>cash on delivery</li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
     <div className="header-middle py-15">
       <div className="container-fluid">
         <div className="header-middle-inner">
           <div className="menu-middle-left">
-            <select name="currentcy" id="currentcy">
+            {/* <select name="currentcy" id="currentcy">
               <option value="USD">USD</option>
               <option value="BDT">BDT</option>
               <option value="EURO">EURO</option>
@@ -484,7 +490,7 @@ const Header3 = () => (
             <div className="follower">
               <i className="fab fa-facebook" />
               <a href="#">250k+ Followers</a>
-            </div>
+            </div> */}
           </div>
           <div className="logo-outer">
             <div className="logo">
@@ -502,7 +508,7 @@ const Header3 = () => (
           {/* Menu Button */}
           <div className="menu-icons">
             {/* Nav Search */}
-            <form
+            {/* <form
               onSubmit={(e) => e.preventDefault()}
               action="#"
               className="nav-search"
@@ -514,17 +520,17 @@ const Header3 = () => (
                 required=""
               />
               <button type="submit" className="searchbutton far fa-search" />
-            </form>
-            <button className="cart">
+            </form> */}
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
-            <button className="user">
+            </button> */}
+            {/* <button className="user">
               <i className="far fa-user-circle" />
             </button>
             <button className="heart">
               <i className="far fa-heart" />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

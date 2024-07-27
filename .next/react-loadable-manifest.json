@@ -11,26 +11,14 @@
       "static/chunks/src_components_MunfimCountdown_js.js"
     ]
   },
-  "index2.js -> ../src/components/MunfimCountdown": {
-    "id": "index2.js -> ../src/components/MunfimCountdown",
-    "files": [
-      "static/chunks/src_components_MunfimCountdown_js.js"
-    ]
-  },
-  "index3.js -> ../src/components/MunfimCountdown": {
-    "id": "index3.js -> ../src/components/MunfimCountdown",
-    "files": [
-      "static/chunks/src_components_MunfimCountdown_js.js"
-    ]
-  },
-  "index3.js -> ../src/components/istotope/PopularProducts": {
-    "id": "index3.js -> ../src/components/istotope/PopularProducts",
+  "index.js -> ../src/components/istotope/PopularProducts": {
+    "id": "index.js -> ../src/components/istotope/PopularProducts",
     "files": [
       "static/chunks/src_components_istotope_PopularProducts_js.js"
     ]
   },
-  "index3.js -> ../src/components/istotope/TrendyProducts": {
-    "id": "index3.js -> ../src/components/istotope/TrendyProducts",
+  "index.js -> ../src/components/istotope/TrendyProducts": {
+    "id": "index.js -> ../src/components/istotope/TrendyProducts",
     "files": [
       "static/chunks/src_components_istotope_TrendyProducts_js.js"
     ]
