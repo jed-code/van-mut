@@ -141,12 +141,14 @@ const DefaultHeader = () => (
               <div className="top-left">
                 <ul>
                   <li>
-                    <i className="far fa-envelope" /> <b>Email Us :</b>{" "}
+                    <i className="far fa-envelope" /> <b>Adresse email :</b>{" "}
                     <a href="mailto:support@gmail.com">support@gmail.com</a>
                   </li>
                   <li>
-                    <i className="far fa-clock" /> <b>Working Hours :</b> Monday
-                    - Friday, 08 am - 05 pm
+                    {/* <i className="far fa-clock" /> <b>Heure de travail :</b>{" "} */}
+                    <i className="far fa-clock" />
+                    Lundi - Samedi: 8:00 - 16:00
+                    {/* , Samedi: 8:00-12:00 */}
                   </li>
                 </ul>
               </div>
@@ -158,7 +160,7 @@ const DefaultHeader = () => (
                     <i className="far fa-phone" /> <b>Call :</b>{" "}
                     <a href="callto:+012(345)67899">+012 (345) 678 99</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <div className="social-style-one">
                       <a href="#">
                         <i className="fab fa-facebook-f" />
@@ -173,7 +175,7 @@ const DefaultHeader = () => (
                         <i className="fab fa-instagram" />
                       </a>
                     </div>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -351,8 +353,11 @@ const Header2 = () => (
               <div className="top-left">
                 <ul>
                   <li>
-                    <i className="far fa-envelope" /> <b>Email Us :</b>{" "}
-                    <a href="mailto:support@gmail.com">support@gmail.com</a>
+                    <i className="far fa-envelope" /> <b>Adresse email :</b>{" "}
+                    <a href="mailto:support@gmail.com">
+                      {" "}
+                      vanmutgroupe@gmail.com
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -361,8 +366,8 @@ const Header2 = () => (
               <div className="top-right text-lg-right">
                 <ul>
                   <li>
-                    <i className="far fa-phone" /> <b>Call :</b>{" "}
-                    <a href="callto:+012(345)67899">+012 (345) 678 99</a>
+                    <i className="far fa-phone" /> <b>Appelez-nous :</b>{" "}
+                    <a href="callto:+243812144542">+243 (81) 214 45 42</a>
                   </li>
                   <li>
                     <div className="social-style-one">
@@ -455,6 +460,7 @@ const Header2 = () => (
 // customize top header
 const Header3 = () => (
   <header className="main-header header-three menu-absolute">
+    {/* <header className="main-header header-three menu-absolute"> */}
     <div
       className="header-top-wrap bgc-primary py-10"
       style={{ backgroundColor: "#00A3E0" }}
