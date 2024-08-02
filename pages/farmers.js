@@ -104,7 +104,7 @@ const Farmers = () => {
                   </div>
                   <div className="team-skill-item">
                     <ProgressBar
-                      color={"#00A3E0"}
+                      color={"#007bff"}
                       value={"83"}
                       extraCls={"two"}
                     />

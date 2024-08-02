@@ -6,7 +6,7 @@ const PageBanner = ({ pageName, pageTitle }) => {
       style={{ backgroundImage: "url(assets/images/banner/banner.jpg)" }}
     >
       <div className="container">
-        <div className="banner-inner" style={{ backgroundColor: "#00A3E0" }}>
+        <div className="banner-inner" style={{ backgroundColor: "#007bff" }}>
           <h1 className="page-title wow fadeInUp delay-0-2s">
             {pageTitle ? pageTitle : pageName}
           </h1>

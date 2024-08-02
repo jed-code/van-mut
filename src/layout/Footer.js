@@ -6,14 +6,15 @@ const Counter = dynamic(() => import("../components/Counter"), {
 });
 
 const Footer = ({ footer }) => {
+  const year = new Date().getFullYear();
   switch (footer) {
     case 1:
-      return <DefaultFooter />;
+      return <DefaultFooter year={year} />;
     case 3:
-      return <Footer3 />;
+      return <Footer3 year={year} />;
 
     default:
-      return <DefaultFooter />;
+      return <DefaultFooter year={year} />;
   }
 };
 export default Footer;
@@ -34,10 +35,10 @@ const ScrollTopBtn = () => {
   );
 };
 
-const DefaultFooter = () => (
-  <footer className="main-footer bg-green text-white">
+const DefaultFooter = ({ year }) => (
+  <footer className="main-footer footer-black text-white">
     <div className="container">
-      <div className="footer-top-newsletter py-80 mb-75">
+      {/* <div className="footer-top-newsletter py-80 mb-75">
         <div className="section-title">
           <h2>Newsletter Subscribe</h2>
         </div>
@@ -47,8 +48,8 @@ const DefaultFooter = () => (
             subscribe now <i className="fas fa-angle-double-right" />
           </button>
         </form>
-      </div>
-      <div className="row justify-content-center">
+      </div> */}
+      <div className="row justify-content-center pt-3">
         <div className="col-lg-4 col-md-6 order-md-2">
           <div className="footer-widget about-widget text-center">
             <div className="footer-logo mb-30">
@@ -58,11 +59,7 @@ const DefaultFooter = () => (
                 </a>
               </Link>
             </div>
-            <p>
-              Sit amet consectetur adipiscing elit sed eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. quis ipsum suspendisse ultrices
-              gravida.
-            </p>
+            <p>Suivez-nous sur les réseaux sociaux</p>
             <div className="social-style-two pt-10">
               <Link href="/contact">
                 <a>
@@ -148,29 +145,29 @@ const DefaultFooter = () => (
         </div>
         <div className="col-lg-4 col-md-6 order-md-3">
           <div className="footer-widget contact-widget">
-            <h4 className="footer-title">Contact Us</h4>
-            <p>
-              Quis autem vel eum reprehenderit voluptate velit esse quamnue{" "}
-            </p>
+            <h4 className="footer-title">Contacter Nous</h4>
+            <p>Retrouvez-nous aux adresses suivantes :</p>
             <ul>
               <li>
                 <i className="fal fa-map-marker-alt" />
-                53 Main Street, 2nd Mountain 3rd Floor, New York
+                04 Av. du marché Q/Révolution C/Gombe ville/Kinshasa R.D.Congo
               </li>
               <li>
                 <i className="far fa-envelope" />
-                <a href="calto:+012(345)67899">+012 (345) 678 99</a>
+                <a href="mailto:vanmutgroupe@gmail.com">
+                  vanmutgroupe@gmail.com
+                </a>
               </li>
               <li>
                 <i className="far fa-phone" />
-                <a href="mailto:support@gmail.com">support@gmail.com</a>
+                <a href="calto:+243(81)2144542">+243 (81) 214 45 42</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="copyright-area pt-25 pb-10">
-        <p>Copyright © 2022 MunFirm. All Rights Reserved.</p>
+        <p>Copyright © {year} van mut. Tous droits réservés</p>
         <ul className="footer-menu">
           <li>
             <Link href="/contact">Setting &amp; Privacy</Link>
@@ -217,10 +214,10 @@ const DefaultFooter = () => (
     </div>
   </footer>
 );
-const Footer3 = () => (
+const Footer3 = ({ year }) => (
   <footer className="main-footer footer-black text-white">
     <div className="container-fluid">
-      <div className="footer-top-newsletter py-80 mb-75">
+      {/* <div className="footer-top-newsletter py-80 mb-75">
         <div className="section-title">
           <h2>Newsletter Subscribe</h2>
         </div>
@@ -237,8 +234,8 @@ const Footer3 = () => (
           </b>
           <span>Happy Clients</span>
         </div>
-      </div>
-      <div className="row justify-content-between">
+      </div> */}
+      <div className="row justify-content-between pt-3">
         <div className="col-xl-5">
           <div className="row justify-content-between">
             <div className="col-sm-7">
@@ -325,7 +322,7 @@ const Footer3 = () => (
           <div className="row justify-content-between">
             <div className="col-lg-4 col-sm-6">
               <div className="footer-widget news-widget">
-                <h4 className="footer-title">Recent News</h4>
+                <h4 className="footer-title">Actualités récentes</h4>
                 <ul>
                   <li>
                     <div className="image">
@@ -364,29 +361,30 @@ const Footer3 = () => (
             </div>
             <div className="col-lg-4 col-sm-6">
               <div className="footer-widget contact-widget">
-                <h4 className="footer-title">Contact Us</h4>
-                <p>
-                  Quis autem vel eum reprehenderit voluptate velit esse quamnue{" "}
-                </p>
+                <h4 className="footer-title">Contacter Nous</h4>
+                <p>Retrouvez-nous aux adresses suivantes :</p>
                 <ul>
                   <li>
                     <i className="fal fa-map-marker-alt" />
-                    53 Main Street, 2nd Mountain 3rd Floor, New York
-                  </li>
-                  <li>
-                    <i className="far fa-phone" />
-                    <a href="mailto:support@gmail.com">support@gmail.com</a>
+                    04 Av. du marché Q/Révolution C/Gombe ville/Kinshasa
+                    R.D.Congo
                   </li>
                   <li>
                     <i className="far fa-envelope" />
-                    <a href="calto:+012(345)67899">+012 (345) 678 99</a>
+                    <a href="mailto:vanmutgroupe@gmail.com">
+                      vanmutgroupe@gmail.com
+                    </a>
+                  </li>
+                  <li>
+                    <i className="far fa-phone" />
+                    <a href="calto:+243(81)2144542">+243 (81) 214 45 42</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-4 col-sm-6">
               <div className="footer-widget gallery-widget">
-                <h4 className="footer-title">Gallery</h4>
+                <h4 className="footer-title">Galerie</h4>
                 <ul>
                   <li>
                     <a href="assets/images/widgets/gallery1.jpg">
@@ -452,7 +450,7 @@ const Footer3 = () => (
     <div className="copyright-area-wrap">
       <div className="container-fluid">
         <div className="copyright-area pt-25 pb-10">
-          <p>Copyright © 2022 van mut. All Rights Reserved.</p>
+          <p>Copyright © {year} van mut. Tous droits réservés.</p>
           <ul className="footer-menu">
             <li>
               <Link href="/contact">

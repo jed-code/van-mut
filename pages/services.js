@@ -208,7 +208,7 @@ const Services = () => {
                     <h4>Agriculture and Farming</h4>
                   </div>
                   <div className="team-skill-item">
-                    <ProgressBar value={83} extraCls={"two"} color="#00A3E0" />
+                    <ProgressBar value={83} extraCls={"two"} color="#007bff" />
                     <h4>Vegetables and Fruits</h4>
                   </div>
                 </div>

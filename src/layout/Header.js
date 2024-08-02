@@ -71,19 +71,20 @@ const DaskTopMenu = () => (
         <span className="fas fa-chevron-down" />
       </div>
     </li>
+
     <li className="dropdown">
-      <a href="#">blog</a>
+      <a href="#">shop</a>
       <ul>
-        <Blog />
+        <Shop />
       </ul>
       <div className="dropdown-btn">
         <span className="fas fa-chevron-down" />
       </div>
     </li>
     <li className="dropdown">
-      <a href="#">shop</a>
+      <a href="#">blog</a>
       <ul>
-        <Shop />
+        <Blog />
       </ul>
       <div className="dropdown-btn">
         <span className="fas fa-chevron-down" />
@@ -133,7 +134,7 @@ const Nav = () => {
 
 const DefaultHeader = () => (
   <header className="main-header">
-    <div className="header-top-wrap bg-light-green text-white py-10">
+    <div className="header-top-wrap bg-primary text-white py-10">
       <div className="container-fluid">
         <div className="header-top">
           <div className="row">
@@ -157,8 +158,8 @@ const DefaultHeader = () => (
               <div className="top-right text-lg-right">
                 <ul>
                   <li>
-                    <i className="far fa-phone" /> <b>Call :</b>{" "}
-                    <a href="callto:+012(345)67899">+012 (345) 678 99</a>
+                    <i className="far fa-phone" /> <b>Appel :</b>{" "}
+                    <a href="callto:+012(345)67899">+243 (81) 214 45 42</a>
                   </li>
                   {/* <li>
                     <div className="social-style-one">
@@ -208,29 +209,29 @@ const DefaultHeader = () => (
           {/* Menu Button */}
           <div className="menu-icons">
             {/* Nav Search */}
-            <div className="nav-search py-15">
+            {/* <div className="nav-search py-15">
               <SearchBtn />
-            </div>
-            <button className="cart">
+            </div> */}
+            {/* <button className="cart">
               <i className="far fa-shopping-basket" />
               <span>5</span>
-            </button>
-            <button className="user">
+            </button> */}
+            {/* <button className="user">
               <i className="far fa-user-circle" />
-            </button>
-            <Link href="/contact">
-              <a className="theme-btn">
-                Consultations <i className="fas fa-angle-double-right" />
+            </button> */}
+            {/* <Link href="/contact">
+              <a className="theme-btn" >
+                Reservation <i className="fas fa-angle-double-right" />
               </a>
-            </Link>
+            </Link> */}
             {/* menu sidbar */}
-            <div className="menu-sidebar" onClick={() => sidebarToggle()}>
+            {/* <div className="menu-sidebar" onClick={() => sidebarToggle()}>
               <button>
                 <i className="far fa-ellipsis-h" />
                 <i className="far fa-ellipsis-h" />
                 <i className="far fa-ellipsis-h" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -462,8 +463,8 @@ const Header3 = () => (
   <header className="main-header header-three menu-absolute">
     {/* <header className="main-header header-three menu-absolute"> */}
     <div
-      className="header-top-wrap bgc-primary py-10"
-      style={{ backgroundColor: "#00A3E0" }}
+      className="header-top-wrap bg-primary py-10"
+      // style={{ backgroundColor: "#007bff" }}
     >
       {/* <div className="container-fluid">
         <div className="header-top px-0">
@@ -551,13 +552,13 @@ const Header3 = () => (
             {/* Main Menu End*/}
           </div>
           {/* menu sidbar */}
-          <div className="menu-sidebar" onClick={() => sidebarToggle()}>
+          {/* <div className="menu-sidebar" onClick={() => sidebarToggle()}>
             <button>
               <i className="far fa-ellipsis-h" />
               <i className="far fa-ellipsis-h" />
               <i className="far fa-ellipsis-h" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
