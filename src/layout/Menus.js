@@ -4,7 +4,7 @@ import { Fragment } from "react";
 export const Home = () => (
   <Fragment>
     <li>
-      <Link href="/">Home</Link>
+      <Link href="/">Accueil</Link>
     </li>
     {/* <li>
       <Link href="/index2">Home Two</Link>
@@ -80,16 +80,30 @@ export const Portfolio = () => (
     </li>
   </Fragment>
 );
+// export const Blog = () => (
+//   <Fragment>
+//     <li>
+//       <Link href="/blog-grid">blog Grid</Link>
+//     </li>
+//     <li>
+//       <Link href="/blog-standard">blog Standard</Link>
+//     </li>
+//     <li>
+//       <Link href="/blog-details">blog details</Link>
+//     </li>
+//   </Fragment>
+// );
+export const Produits = () => (
+  <Fragment>
+    <li>
+      <Link href="/produits">Nos Produits</Link>
+    </li>
+  </Fragment>
+);
 export const Blog = () => (
   <Fragment>
     <li>
-      <Link href="/blog-grid">blog Grid</Link>
-    </li>
-    <li>
-      <Link href="/blog-standard">blog Standard</Link>
-    </li>
-    <li>
-      <Link href="/blog-details">blog details</Link>
+      <Link href="/blog">blog</Link>
     </li>
   </Fragment>
 );

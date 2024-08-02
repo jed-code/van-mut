@@ -86,7 +86,7 @@ const DefaultFooter = ({ year }) => (
         </div>
         <div className="col-lg-4 col-md-6 order-md-1">
           <div className="footer-widget menu-widget two-column">
-            <h4 className="footer-title">Quick Links</h4>
+            <h4 className="footer-title">Raccourcis</h4>
             <ul>
               <li>
                 <Link href="/about">
@@ -281,7 +281,7 @@ const Footer3 = ({ year }) => (
             </div>
             <div className="col-sm-4">
               <div className="footer-widget menu-widget">
-                <h4 className="footer-title">Quick Links</h4>
+                <h4 className="footer-title">Raccourcis</h4>
                 <ul>
                   <li>
                     <Link href="/about">

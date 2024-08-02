@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import { sidebarToggle } from "../utils";
-import { Blog, Contact, Home, PagesDasktop, Portfolio, Shop } from "./Menus";
+import {
+  Home,
+  Produits,
+  Blog,
+  Contact,
+  PagesDasktop,
+  Portfolio,
+  Shop,
+} from "./Menus";
 import MobileMenu from "./MobileMenu";
 
 const Header = ({ header }) => {
@@ -53,7 +61,7 @@ const DaskTopMenu = () => (
         <span className="fas fa-chevron-down" />
       </div>
     </li> */}
-    <li className="dropdown">
+    {/* <li className="dropdown">
       <a href="#">pages</a>
       <ul>
         <PagesDasktop />
@@ -61,8 +69,8 @@ const DaskTopMenu = () => (
       <div className="dropdown-btn">
         <span className="fas fa-chevron-down" />
       </div>
-    </li>
-    <li className="dropdown">
+    </li> */}
+    {/* <li className="dropdown">
       <a href="#">portfolio</a>
       <ul>
         <Portfolio />
@@ -70,9 +78,9 @@ const DaskTopMenu = () => (
       <div className="dropdown-btn">
         <span className="fas fa-chevron-down" />
       </div>
-    </li>
+    </li> */}
 
-    <li className="dropdown">
+    {/* <li className="dropdown">
       <a href="#">shop</a>
       <ul>
         <Shop />
@@ -80,16 +88,9 @@ const DaskTopMenu = () => (
       <div className="dropdown-btn">
         <span className="fas fa-chevron-down" />
       </div>
-    </li>
-    <li className="dropdown">
-      <a href="#">blog</a>
-      <ul>
-        <Blog />
-      </ul>
-      <div className="dropdown-btn">
-        <span className="fas fa-chevron-down" />
-      </div>
-    </li>
+    </li> */}
+    <Produits />
+    <Blog />
     <Contact />
   </ul>
 );
