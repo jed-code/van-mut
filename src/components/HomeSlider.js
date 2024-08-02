@@ -22,7 +22,7 @@ export const HomeSlider1 = () => {
             <div className="col-lg-6">
               <div className="slider-content">
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Organic Foods &amp; Vegetables</h1>
+                <h1> Créativité &amp; Précision</h1>
                 <h6>25 Years of experience in agriculture farming</h6>
                 <div className="slider-btns mt-30">
                   <Link href="/shop-grid">
@@ -106,7 +106,7 @@ export const HomeSlider1 = () => {
             <div className="col-lg-6">
               <div className="slider-content">
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Organic Foods &amp; Vegetables</h1>
+                <h1>Créativité &amp; Précision</h1>
                 <h6>25 Years of experience in agriculture farming</h6>
                 <div className="slider-btns mt-30">
                   <Link href="/shop-grid">
@@ -182,7 +182,7 @@ export const HomeSlider2 = () => {
             <div className="col-lg-6">
               <div className="slider-content">
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Organic Foods &amp; Vegetables</h1>
+                <h1>Créativité &amp; Précision</h1>
                 <div className="slider-btns mt-30">
                   <Link href="/shop-grid">
                     <a className="theme-btn style-two">
@@ -224,7 +224,7 @@ export const HomeSlider2 = () => {
             <div className="col-lg-6">
               <div className="slider-content">
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Organic Foods &amp; Vegetables</h1>
+                <h1>Créativité &amp; Précision</h1>
                 <div className="slider-btns mt-30">
                   <Link href="/about">
                     <a className="theme-btn style-two">
@@ -286,22 +286,23 @@ export const HomeSlider3 = () => {
             <div className="col-xl-5">
               <div className="slider-content">
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Organic Food &amp; Vegetables</h1>
+                <h1>Créativité &amp; Précision</h1>
                 <p>
-                  On the other hand we denounce with righteou indignation and
-                  dislike men who are so beguiled and demoralized
+                  Transformez vos idées en chefs-d'œuvre avec Van Mut, où notre
+                  équipe fusionne créativité et précision pour des impressions
+                  exceptionnelles.
                 </p>
                 <div className="slider-btns mt-20">
-                  <Link href="/shop-grid">
+                  <Link href="/produits">
                     <a className="theme-btn style-two">
-                      Shop Now <i className="fas fa-angle-double-right" />
+                      Voir plus <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
-                  <Link href="/about">
+                  {/* <Link href="/about">
                     <a className="theme-btn style-three">
                       Learn More <i className="fas fa-angle-double-right" />
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -336,22 +337,23 @@ export const HomeSlider3 = () => {
             <div className="col-xl-5">
               <div className="slider-content">
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Organic Food &amp; Vegetables</h1>
+                <h1>Créativité &amp; Précision</h1>
                 <p>
-                  On the other hand we denounce with righteou indignation and
-                  dislike men who are so beguiled and demoralized
+                  Transformez vos idées en chefs-d'œuvre avec Van Mut, où notre
+                  équipe fusionne créativité et précision pour des impressions
+                  exceptionnelles.
                 </p>
                 <div className="slider-btns mt-20">
-                  <Link href="/shop-grid">
+                  <Link href="/produits">
                     <a className="theme-btn style-two">
-                      Shop Now <i className="fas fa-angle-double-right" />
+                      Voir plus <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
-                  <Link href="/about">
+                  {/* <Link href="/about">
                     <a className="theme-btn style-three">
                       Learn More <i className="fas fa-angle-double-right" />
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

@@ -220,7 +220,7 @@ const Footer3 = ({ year }) => (
                 </div>
                 <p>
                   Transformez vos impressions en véritables œuvres d'art avec
-                  Magic Mut ! Notre équipe d'experts passionnés est à votre
+                  Van Mut ! Notre équipe d'experts passionnés est à votre
                   service pour vous offrir des impressions d'une qualité
                   inégalée, alliant créativité et précision pour un résultat
                   magique.

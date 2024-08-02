@@ -103,7 +103,7 @@ const Index = () => {
                   <h3>Vegetables</h3>
                   <Link href="/shop-grid">
                     <a className="theme-btn style-three">
-                      Shop Now <i className="fas fa-angle-double-right" />
+                      Voir Plus <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
                 </div>
@@ -122,7 +122,7 @@ const Index = () => {
                   <h3>Fast Delivery</h3>
                   <Link href="/shop-grid">
                     <a className="theme-btn style-three">
-                      Shop Now <i className="fas fa-angle-double-right" />
+                      Voir Plus <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
                 </div>
@@ -141,7 +141,7 @@ const Index = () => {
                   <h3>Organic Fruits</h3>
                   <Link href="/shop-grid">
                     <a className="theme-btn style-three">
-                      Shop Now <i className="fas fa-angle-double-right" />
+                      Voir Plus <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
                 </div>
@@ -152,7 +152,7 @@ const Index = () => {
       </section>
       {/* Offer Banners End */}
       {/* Product Category Area Start */}
-      <section className="product-category-area pb-30">
+      {/* <section className="product-category-area pb-30">
         <div className="container-fluid">
           <div className="product-category-inner">
             <div className="row justify-content-center">
@@ -249,7 +249,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Product Category Area End */}
       {/* Shop Area Start */}
       <section className="shop-area-three rel z-1 py-50">
@@ -298,13 +298,14 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <div className="w-100 py-3"></div>
       {/* Special Offer End */}
       {/* Shop Area Start */}
-      <section className="shop-area-four rel z-1 pt-80 pb-50">
+      {/* <section className="shop-area-four rel z-1 pt-80 pb-50">
         <div className="container-fluid">
           <TrendyProducts />
         </div>
-      </section>
+      </section> */}
       {/* Shop Area End */}
       {/* Client Logo Area Start */}
       <div className="client-logo-area-two text-center mb-80">
