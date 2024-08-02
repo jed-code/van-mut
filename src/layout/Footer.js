@@ -85,60 +85,28 @@ const DefaultFooter = ({ year }) => (
           </div>
         </div>
         <div className="col-lg-4 col-md-6 order-md-1">
-          <div className="footer-widget menu-widget two-column">
+          <div className="footer-widget menu-widget one-column">
             <h4 className="footer-title">Raccourcis</h4>
             <ul>
               <li>
-                <Link href="/about">
-                  <a>About Us</a>
+                <Link href="/">
+                  <a>Accueil</a>
                 </Link>
               </li>
               <li>
-                <Link href="/contact">Documentation</Link>
-              </li>
-              <li>
-                <Link href="/services">
-                  <a>Services</a>
+                <Link href="/produits">
+                  <a>Produits</a>
                 </Link>
               </li>
               <li>
-                <Link href="/services">Elements</Link>
-              </li>
-              <li>
-                <Link href="/portfolio-grid">
-                  <a>Our Projects</a>
+                <Link href="/blog">
+                  <a>Blog</a>
                 </Link>
               </li>
               <li>
-                <Link href="/shop-grid">
-                  <a>Best Products</a>
+                <Link href="/contact">
+                  <a>Nos Contacts</a>
                 </Link>
-              </li>
-              <li>
-                <Link href="/farmers">
-                  <a>Meet Farmers</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/service-details">
-                  <a>Technology</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog-grid">
-                  <a>Latest News</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact Us</Link>
-              </li>
-              <li>
-                <Link href="/service-details">
-                  <a>Vegetables</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">Setting &amp; Privacy</Link>
               </li>
             </ul>
           </div>
@@ -170,16 +138,16 @@ const DefaultFooter = ({ year }) => (
         <p>Copyright © {year} van mut. Tous droits réservés</p>
         <ul className="footer-menu">
           <li>
-            <Link href="/contact">Setting &amp; Privacy</Link>
+            <Link href="/contact">Paramètres &amp; confidentialité</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/faqs">
               <a>Faqs</a>
             </Link>
           </li>
           <li>
             <Link href="/contact">Payments</Link>
-          </li>
+          </li> */}
         </ul>
         {/* Scroll Top Button */}
         <ScrollTopBtn />
@@ -284,33 +252,23 @@ const Footer3 = ({ year }) => (
                 <h4 className="footer-title">Raccourcis</h4>
                 <ul>
                   <li>
-                    <Link href="/about">
-                      <a>About Us</a>
+                    <Link href="/">
+                      <a>Accueil</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services">
-                      <a>Services</a>
+                    <Link href="/produits">
+                      <a>Produits</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/portfolio-grid">
-                      <a>Our Projects</a>
+                    <Link href="/blog">
+                      <a>Blog</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/farmers">
-                      <a>Meet Farmers</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-grid">
-                      <a>Latest News</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">
-                      <a>Vegetables</a>
+                    <Link href="/contact">
+                      <a>Nos Contacts</a>
                     </Link>
                   </li>
                 </ul>
@@ -454,10 +412,10 @@ const Footer3 = ({ year }) => (
           <ul className="footer-menu">
             <li>
               <Link href="/contact">
-                <a>Setting &amp; Privacy</a>
+                <a>Paramètres &amp; confidentialité</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/faqs">
                 <a>Faqs</a>
               </Link>
@@ -466,7 +424,7 @@ const Footer3 = ({ year }) => (
               <Link href="/contact">
                 <a>Payments</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
           {/* Scroll Top Button */}
           <button className="scroll-top scroll-to-target" data-target="html">
