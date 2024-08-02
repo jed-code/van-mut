@@ -219,9 +219,11 @@ const Footer3 = ({ year }) => (
                   </Link>
                 </div>
                 <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam eaque
-                  epsa quae abillo inventore veritatis quasi architecto
+                  Transformez vos impressions en véritables œuvres d'art avec
+                  Magic Mut ! Notre équipe d'experts passionnés est à votre
+                  service pour vous offrir des impressions d'une qualité
+                  inégalée, alliant créativité et précision pour un résultat
+                  magique.
                 </p>
                 <div className="social-style-two pt-10">
                   <Link href="/contact">
