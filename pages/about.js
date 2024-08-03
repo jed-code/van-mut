@@ -126,9 +126,9 @@ const About = () => {
                   </p>
                 </div>
                 <Link href="/service-details">
-                  <a className="read-more">
+                  <div className="read-more">
                     Read More <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -149,9 +149,9 @@ const About = () => {
                   </p>
                 </div>
                 <Link href="/service-details">
-                  <a className="read-more">
+                  <div className="read-more">
                     Read More <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -172,9 +172,9 @@ const About = () => {
                   </p>
                 </div>
                 <Link href="/service-details">
-                  <a className="read-more">
+                  <div className="read-more">
                     Read More <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

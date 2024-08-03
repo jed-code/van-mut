@@ -27,10 +27,10 @@ const BlogStandard = () => {
                   </ul>
                   <h4>
                     <Link href="/blog-details">
-                      <a>
-                        Unicode UTF8 &amp; Character Sets The Sltimate Guide
-                        Systems
-                      </a>
+                      {/* <a> */}
+                      Unicode UTF8 &amp; Character Sets The Sltimate Guide
+                      Systems
+                      {/* </a> */}
                     </Link>
                   </h4>
                   <p>
@@ -38,9 +38,13 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <span className="read-more">
+                      {" "}
+                      Read More <i className="fas fa-angle-double-right" />{" "}
+                    </span> */}
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -69,9 +73,9 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -92,10 +96,10 @@ const BlogStandard = () => {
                   </ul>
                   <h4>
                     <Link href="/blog-details">
-                      <a>
-                        Unicode UTF8 &amp; Character Sets The Sltimate Guide
-                        Systems
-                      </a>
+                      {/* <a> */}
+                      Unicode UTF8 &amp; Character Sets The Sltimate Guide
+                      Systems
+                      {/* </a> */}
                     </Link>
                   </h4>
                   <p>
@@ -103,9 +107,11 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -134,9 +140,11 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -165,9 +173,11 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -196,9 +206,11 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -228,9 +240,11 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -259,9 +273,11 @@ const BlogStandard = () => {
                     incididunt ut labore et dolore
                   </p>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -286,24 +302,24 @@ const BlogStandard = () => {
                   </p>
                   <div className="social-style-one">
                     <Link href="/contact">
-                      <a>
-                        <i className="fab fa-facebook-f" />
-                      </a>
+                      {/* <a> */}
+                      <i className="fab fa-facebook-f" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        <i className="fab fa-twitter" />
-                      </a>
+                      {/* <a> */}
+                      <i className="fab fa-twitter" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        <i className="fab fa-linkedin-in" />
-                      </a>
+                      {/* <a> */}
+                      <i className="fab fa-linkedin-in" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        <i className="fab fa-youtube" />
-                      </a>
+                      {/* <a> */}
+                      <i className="fab fa-youtube" />
+                      {/* </a> */}
                     </Link>
                   </div>
                   <img

@@ -39,10 +39,10 @@ const ServiceDetails = () => {
                       </div>
                       <h4>
                         <Link href="/service-details">
-                          <a>
-                            Agriculture
-                            <br /> Foods
-                          </a>
+                          {/* <a> */}
+                          Agriculture
+                          <br /> Foods
+                          {/* </a> */}
                         </Link>
                       </h4>
                     </div>
@@ -54,11 +54,9 @@ const ServiceDetails = () => {
                       </div>
                       <h4>
                         <Link href="/service-details">
-                          <a>
-                            {" "}
-                            Vegetables
-                            <br /> &amp; Fruits
-                          </a>
+                          {/* <a> */} Vegetables
+                          <br /> &amp; Fruits
+                          {/* </a> */}
                         </Link>
                       </h4>
                     </div>
@@ -70,11 +68,9 @@ const ServiceDetails = () => {
                       </div>
                       <h4>
                         <Link href="/service-details">
-                          <a>
-                            {" "}
-                            Farming
-                            <br /> Products
-                          </a>
+                          {/* <a> */} Farming
+                          <br /> Products
+                          {/* </a> */}
                         </Link>
                       </h4>
                     </div>
@@ -86,11 +82,9 @@ const ServiceDetails = () => {
                       </div>
                       <h4>
                         <Link href="/service-details">
-                          <a>
-                            {" "}
-                            Crisp Bread
-                            <br /> &amp; Cake’s
-                          </a>
+                          {/* <a> */} Crisp Bread
+                          <br /> &amp; Cake’s
+                          {/* </a> */}
                         </Link>
                       </h4>
                     </div>
@@ -179,9 +173,11 @@ const ServiceDetails = () => {
                     <img src="assets/images/shapes/wave-white.png" alt="Wave" />
                     <br />
                     <Link href="/contact">
-                      <a className="theme-btn style-three bg-white mt-30">
+                      {/* <a className="theme-btn style-three bg-white mt-30"> */}
+                      <span className="theme-btn style-three bg-white mt-30">
                         Contact Us <i className="fas fa-angle-double-right" />
-                      </a>
+                      </span>
+                      {/* </a> */}
                     </Link>
                     <img
                       className="bg"
@@ -193,14 +189,18 @@ const ServiceDetails = () => {
                 <div className="widget widget-btns wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">Download Now</h4>
                   <Link href="/contact">
-                    <a className="theme-btn mb-10">
+                    {/* <a className="theme-btn mb-10"> */}
+                    <span className="theme-btn mb-10">
                       Download Pdf <i className="far fa-file-pdf" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                   <Link href="/contact">
-                    <a className="theme-btn style-two">
+                    {/* <a className="theme-btn style-two"> */}
+                    <span className="theme-btn style-two">
                       Download Doc <i className="far fa-file-word" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -225,9 +225,11 @@ const ServiceDetails = () => {
                   <h2>Get Our Quality Foods</h2>
                 </div>
                 <Link href="/contact">
-                  <a className="theme-btn style-two">
+                  {/* <a className="theme-btn style-two"> */}
+                  <span className="theme-btn style-two">
                     Get In Touch <i className="fas fa-angle-double-right" />
-                  </a>
+                  </span>
+                  {/* </a> */}
                 </Link>
               </div>
             </div>

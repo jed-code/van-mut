@@ -26,14 +26,14 @@ export const HomeSlider1 = () => {
                 <h6>25 Years of experience in agriculture farming</h6>
                 <div className="slider-btns mt-30">
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                   <Link href="/about">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Learn More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -110,14 +110,14 @@ export const HomeSlider1 = () => {
                 <h6>25 Years of experience in agriculture farming</h6>
                 <div className="slider-btns mt-30">
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                   <Link href="/about">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Learn More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -185,15 +185,15 @@ export const HomeSlider2 = () => {
                 <h1>Créativité &amp; Précision</h1>
                 <div className="slider-btns mt-30">
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
-                  <Link href="/about">
+                  {/* <Link href="/about">
                     <a className="theme-btn style-two">
                       Learn More <i className="fas fa-angle-double-right" />
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -226,15 +226,15 @@ export const HomeSlider2 = () => {
                 <div className="sub-title mb-20">Bienvenu à Van mut</div>
                 <h1>Créativité &amp; Précision</h1>
                 <div className="slider-btns mt-30">
-                  <Link href="/about">
-                    <a className="theme-btn style-two">
+                  {/* <Link href="/about">
+                    <div className="theme-btn style-two">
                       Learn More <i className="fas fa-angle-double-right" />
-                    </a>
-                  </Link>
+                    </div>
+                  </Link> */}
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -294,9 +294,9 @@ export const HomeSlider3 = () => {
                 </p>
                 <div className="slider-btns mt-20">
                   <Link href="/produits">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Voir plus <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                   {/* <Link href="/about">
                     <a className="theme-btn style-three">
@@ -345,9 +345,9 @@ export const HomeSlider3 = () => {
                 </p>
                 <div className="slider-btns mt-20">
                   <Link href="/produits">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Voir plus <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                   {/* <Link href="/about">
                     <a className="theme-btn style-three">

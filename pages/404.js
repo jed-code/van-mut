@@ -21,9 +21,9 @@ const E404 = () => {
                 commodo viverra maecenas accumsan
               </p>
               <Link href="/">
-                <a className="theme-btn style-three mt-15">
+                <div className="theme-btn style-three mt-15">
                   Goto Home <i className="fas fa-angle-double-right" />
-                </a>
+                </div>
               </Link>
             </div>
           </div>

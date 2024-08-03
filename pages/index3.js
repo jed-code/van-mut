@@ -230,9 +230,9 @@ const Index3 = () => {
                   <h4>Organic Vegetables</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
                 <div className="image">
@@ -255,9 +255,9 @@ const Index3 = () => {
                   <h4>Fresh Organic Fruits</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
                 <div className="image">
@@ -280,9 +280,9 @@ const Index3 = () => {
                   <h4>Ripe Strawberries</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
                 <div className="image">
@@ -499,15 +499,15 @@ const Index3 = () => {
           <MunfimCountdown />
           <div className="count-down-btns mt-10">
             <Link href="/shop-grid">
-              <a className="theme-btn">
+              <div className="theme-btn">
                 Shop Now <i className="fas fa-angle-double-right" />
-              </a>
+              </div>
             </Link>
-            <Link href="/about">
+            {/* <Link href="/about">
               <a className="theme-btn style-two">
                 use code <i className="fas fa-angle-double-right" />
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <img
@@ -555,9 +555,9 @@ const Index3 = () => {
               </div>
               <div className="col-lg-4 text-lg-right">
                 <Link href="/contact">
-                  <a className="theme-btn btn-white my-15">
+                  <div className="theme-btn btn-white my-15">
                     Get In Touch <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -624,9 +624,9 @@ const Index3 = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -647,9 +647,9 @@ const Index3 = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -670,9 +670,9 @@ const Index3 = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>

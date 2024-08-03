@@ -102,9 +102,9 @@ const Index = () => {
                   <span className="sub-title">100% Fresh</span>
                   <h3>Vegetables</h3>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-three">
+                    <div className="theme-btn style-three">
                       Voir Plus <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -121,9 +121,9 @@ const Index = () => {
                   <span className="sub-title">25% Off</span>
                   <h3>Fast Delivery</h3>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-three">
+                    <div className="theme-btn style-three">
                       Voir Plus <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -140,9 +140,9 @@ const Index = () => {
                   <span className="sub-title">100% Fresh</span>
                   <h3>Organic Fruits</h3>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-three">
+                    <div className="theme-btn style-three">
                       Voir Plus <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -279,15 +279,15 @@ const Index = () => {
               <MunfimCountdown />
               <div className="count-down-btns mt-10">
                 <Link href="/shop-grid">
-                  <a className="theme-btn">
+                  <div className="theme-btn">
                     Shop Now <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
-                <Link href="/about">
+                {/* <Link href="/about">
                   <a className="theme-btn style-three">
                     use code <i className="fas fa-angle-double-right" />
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <img
@@ -314,122 +314,122 @@ const Index = () => {
             <Slider {...clientLogo} className="client-logo-wrap py-60">
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-1.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-1.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-2.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-2.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-3.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-3.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-4.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-4.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-5.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-5.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-6.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-6.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-1.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-1.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-2.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-2.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-3.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-3.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-4.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-4.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-5.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-5.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
               <div className="client-logo-item color-hover">
                 <Link href="/contact">
-                  <a>
-                    <img
-                      src="assets/images/client-logo/client-logo-two-6.png"
-                      alt="Client Logo"
-                    />
-                  </a>
+                  {/* <a> */}
+                  <img
+                    src="assets/images/client-logo/client-logo-two-6.png"
+                    alt="Client Logo"
+                  />
+                  {/* </a> */}
                 </Link>
               </div>
             </Slider>

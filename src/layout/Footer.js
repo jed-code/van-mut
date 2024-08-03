@@ -54,32 +54,32 @@ const DefaultFooter = ({ year }) => (
           <div className="footer-widget about-widget text-center">
             <div className="footer-logo mb-30">
               <Link href="/">
-                <a>
-                  <img src="assets/images/logos/logo.png" alt="Logo" />
-                </a>
+                {/* <a> */}
+                <img src="assets/images/logos/logo.png" alt="Logo" />
+                {/* </a> */}
               </Link>
             </div>
             <p>Suivez-nous sur les réseaux sociaux</p>
             <div className="social-style-two pt-10">
               <Link href="/contact">
-                <a>
-                  <i className="fab fa-facebook-f" />
-                </a>
+                {/* <a> */}
+                <i className="fab fa-facebook-f" />
+                {/* </a> */}
               </Link>
               <Link href="/contact">
-                <a>
-                  <i className="fab fa-twitter" />
-                </a>
+                {/* <a> */}
+                <i className="fab fa-twitter" />
+                {/* </a> */}
               </Link>
               <Link href="/contact">
-                <a>
-                  <i className="fab fa-linkedin-in" />
-                </a>
+                {/* <a> */}
+                <i className="fab fa-linkedin-in" />
+                {/* </a> */}
               </Link>
               <Link href="/contact">
-                <a>
-                  <i className="fab fa-youtube" />
-                </a>
+                {/* <a> */}
+                <i className="fab fa-youtube" />
+                {/* </a> */}
               </Link>
             </div>
           </div>
@@ -90,22 +90,30 @@ const DefaultFooter = ({ year }) => (
             <ul>
               <li>
                 <Link href="/">
-                  <a>Accueil</a>
+                  {/* <a> */}
+                  Accueil
+                  {/* </a> */}
                 </Link>
               </li>
               <li>
                 <Link href="/produits">
-                  <a>Produits</a>
+                  {/* <a> */}
+                  Produits
+                  {/* </a> */}
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <a>Blog</a>
+                  {/* <a> */}
+                  Blog
+                  {/* </a> */}
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a>Nos Contacts</a>
+                  {/* <a> */}
+                  Nos Contacts
+                  {/* </a> */}
                 </Link>
               </li>
             </ul>
@@ -210,12 +218,12 @@ const Footer3 = ({ year }) => (
               <div className="footer-widget about-widget">
                 <div className="footer-logo mb-30">
                   <Link href="/">
-                    <a>
-                      <img
-                        src="assets/images/logos/logo-two-white.png"
-                        alt="Logo"
-                      />
-                    </a>
+                    {/* <a> */}
+                    <img
+                      src="assets/images/logos/logo-two-white.png"
+                      alt="Logo"
+                    />
+                    {/* </a> */}
                   </Link>
                 </div>
                 <p>
@@ -227,24 +235,24 @@ const Footer3 = ({ year }) => (
                 </p>
                 <div className="social-style-two pt-10">
                   <Link href="/contact">
-                    <a>
-                      <i className="fab fa-facebook-f" />
-                    </a>
+                    {/* <a> */}
+                    <i className="fab fa-facebook-f" />
+                    {/* </a> */}
                   </Link>
                   <Link href="/contact">
-                    <a>
-                      <i className="fab fa-twitter" />
-                    </a>
+                    {/* <a> */}
+                    <i className="fab fa-twitter" />
+                    {/* </a> */}
                   </Link>
                   <Link href="/contact">
-                    <a>
-                      <i className="fab fa-linkedin-in" />
-                    </a>
+                    {/* <a> */}
+                    <i className="fab fa-linkedin-in" />
+                    {/* </a> */}
                   </Link>
                   <Link href="/contact">
-                    <a>
-                      <i className="fab fa-youtube" />
-                    </a>
+                    {/* <a> */}
+                    <i className="fab fa-youtube" />
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -255,22 +263,30 @@ const Footer3 = ({ year }) => (
                 <ul>
                   <li>
                     <Link href="/">
-                      <a>Accueil</a>
+                      {/* <a> */}
+                      Accueil
+                      {/* </a> */}
                     </Link>
                   </li>
                   <li>
                     <Link href="/produits">
-                      <a>Produits</a>
+                      {/* <a> */}
+                      Produits
+                      {/* </a> */}
                     </Link>
                   </li>
                   <li>
                     <Link href="/blog">
-                      <a>Blog</a>
+                      {/* <a> */}
+                      Blog
+                      {/* </a> */}
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a>Nos Contacts</a>
+                      {/* <a> */}
+                      Nos Contacts
+                      {/* </a> */}
                     </Link>
                   </li>
                 </ul>
@@ -414,7 +430,9 @@ const Footer3 = ({ year }) => (
           <ul className="footer-menu">
             <li>
               <Link href="/contact">
-                <a>Paramètres &amp; confidentialité</a>
+                {/* <a> */}
+                Paramètres &amp; confidentialité
+                {/* </a> */}
               </Link>
             </li>
             {/* <li>

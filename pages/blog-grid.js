@@ -25,9 +25,12 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
+                      {" "}
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -48,9 +51,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -71,9 +76,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -94,9 +101,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -117,9 +126,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -140,9 +151,12 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
+                      {" "}
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -163,9 +177,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -186,9 +202,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>
@@ -209,9 +227,11 @@ const BlogGrid = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    {/* <a className="read-more"> */}
+                    <span className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </span>
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>

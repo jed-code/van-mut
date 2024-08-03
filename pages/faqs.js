@@ -23,9 +23,9 @@ const Faqs = () => {
                   dislike men who are beguiled and demoralized by the charms
                 </p>
                 <Link href="/services">
-                  <a className="read-more color-secondary">
+                  <div className="read-more color-secondary">
                     Read More <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

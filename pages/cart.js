@@ -133,14 +133,14 @@ const CartPage = () => {
             <div className="col-lg-6">
               <div className="update-shopping text-lg-right">
                 <Link href="/shop-grid">
-                  <a className="theme-btn style-two">
+                  <div className="theme-btn style-two">
                     shopping <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
                 <Link href="/shop-grid">
-                  <a className="theme-btn">
+                  <div className="theme-btn">
                     update cart <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -179,9 +179,9 @@ const CartPage = () => {
                     </tbody>
                   </table>
                   <Link href="/checkout">
-                    <a className="theme-btn style-two mt-25 w-100">
+                    <div className="theme-btn style-two mt-25 w-100">
                       Proceed to checkout
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>

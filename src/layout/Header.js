@@ -102,14 +102,14 @@ const Nav = () => {
       <div className="navbar-header">
         <div className="mobile-logo my-15">
           <Link href="/">
-            <a>
-              <img src="assets/images/logos/logo.png" alt="Logo" title="Logo" />
-              <img
-                src="assets/images/logos/logo-white.png"
-                alt="Logo"
-                title="Logo"
-              />
-            </a>
+            {/* <a> */}
+            <img src="assets/images/logos/logo.png" alt="Logo" title="Logo" />
+            <img
+              src="assets/images/logos/logo-white.png"
+              alt="Logo"
+              title="Logo"
+            />
+            {/* </a> */}
           </Link>
         </div>
         {/* Toggle Button */}
@@ -192,13 +192,13 @@ const DefaultHeader = () => (
           <div className="logo-outer">
             <div className="logo">
               <Link href="/">
-                <a>
-                  <img
-                    src="assets/images/logos/logo.png"
-                    alt="Logo"
-                    title="Logo"
-                  />
-                </a>
+                {/* <a> */}
+                <img
+                  src="assets/images/logos/logo.png"
+                  alt="Logo"
+                  title="Logo"
+                />
+                {/* </a> */}
               </Link>
             </div>
           </div>
@@ -297,13 +297,13 @@ const Header1 = () => (
           <div className="logo-outer">
             <div className="logo">
               <Link href="/">
-                <a>
-                  <img
-                    src="assets/images/logos/logo.png"
-                    alt="Logo"
-                    title="Logo"
-                  />
-                </a>
+                {/* <a> */}
+                <img
+                  src="assets/images/logos/logo.png"
+                  alt="Logo"
+                  title="Logo"
+                />
+                {/* </a> */}
               </Link>
             </div>
           </div>
@@ -401,18 +401,18 @@ const Header2 = () => (
           <div className="logo-outer">
             <div className="logo">
               <Link href="/">
-                <a>
-                  <img
-                    src="assets/images/logos/logo.png"
-                    alt="Logo"
-                    title="Logo"
-                  />
-                  <img
-                    src="assets/images/logos/logo-white.png"
-                    alt="Logo"
-                    title="Logo"
-                  />
-                </a>
+                {/* <a> */}
+                <img
+                  src="assets/images/logos/logo.png"
+                  alt="Logo"
+                  title="Logo"
+                />
+                <img
+                  src="assets/images/logos/logo-white.png"
+                  alt="Logo"
+                  title="Logo"
+                />
+                {/* </a> */}
               </Link>
             </div>
           </div>
@@ -503,13 +503,13 @@ const Header3 = () => (
           <div className="logo-outer">
             <div className="logo">
               <Link href="/">
-                <a>
-                  <img
-                    src="assets/images/logos/logo-two.png"
-                    alt="Logo"
-                    title="Logo"
-                  />
-                </a>
+                {/* <a> */}
+                <img
+                  src="assets/images/logos/logo-two.png"
+                  alt="Logo"
+                  title="Logo"
+                />
+                {/* </a> */}
               </Link>
             </div>
           </div>

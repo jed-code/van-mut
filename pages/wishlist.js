@@ -54,7 +54,7 @@ const WishlistPage = () => {
                 <span className="product-price">{w.price}</span>
                 <strong className="stock">In Stock</strong>
                 <Link href="/cart">
-                  <a className="theme-btn style-two">Add to Cart</a>
+                  <div className="theme-btn style-two">Add to Cart</div>
                 </Link>
               </div>
             ))}

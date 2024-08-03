@@ -93,11 +93,11 @@ const PortfolioDetails = () => {
                 </div>
               </div>
               <Link href="/portfolio-grid">
-                <a className="show-all">
+                <div className="show-all">
                   <i className="fal fa-ellipsis-h-alt" />
                   <i className="fal fa-ellipsis-h-alt" />
                   <i className="fal fa-ellipsis-h-alt" />
-                </a>
+                </div>
               </Link>
               <div className="next-portfolio wow fadeInRight delay-0-2s">
                 <div className="content">

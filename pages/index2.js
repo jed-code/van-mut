@@ -69,9 +69,9 @@ const Index2 = () => {
                   foresee the pain and trouble
                 </p>
                 <Link href="/about">
-                  <a className="read-more">
+                  <div className="read-more">
                     Read More <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
                 <div className="about-features mt-70">
                   <div className="row">
@@ -509,9 +509,9 @@ const Index2 = () => {
                 </p>
                 <div className="about-btn-number pt-5">
                   <Link href="/about">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Learn More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                   <a href="callto:+012(345)678" className="number">
                     <i className="far fa-phone" /> <b>+012 (345) 678</b>
@@ -565,9 +565,9 @@ const Index2 = () => {
                   <h4>Organic Vegetables</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -585,9 +585,9 @@ const Index2 = () => {
                   <h4>Fresh Organic Fruits</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -605,9 +605,9 @@ const Index2 = () => {
                   <h4>Ripe Strawberries</h4>
                   <p>Best Foods For Your Family</p>
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -653,15 +653,15 @@ const Index2 = () => {
                 <MunfimCountdown />
                 <div className="count-down-btns mt-10">
                   <Link href="/shop-grid">
-                    <a className="theme-btn style-two">
+                    <div className="theme-btn style-two">
                       Shop Now <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
-                  <Link href="/about">
-                    <a className="theme-btn style-two">
+                  {/* <Link href="/about">
+                    <div className="theme-btn style-two">
                       use code <i className="fas fa-angle-double-right" />
-                    </a>
-                  </Link>
+                    </div>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -804,9 +804,9 @@ const Index2 = () => {
             <div className="col-lg-4 text-lg-right">
               <div className="more-news-btn mb-25">
                 <Link href="/blog-grid">
-                  <a className="theme-btn style-two">
+                  <div className="theme-btn style-two">
                     View More News <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -828,9 +828,9 @@ const Index2 = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -851,9 +851,9 @@ const Index2 = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -874,9 +874,9 @@ const Index2 = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -901,9 +901,9 @@ const Index2 = () => {
                   <h2>Get Our Quality Foods</h2>
                 </div>
                 <Link href="/contact">
-                  <a className="theme-btn style-two">
+                  <div className="theme-btn style-two">
                     Get In Touch <i className="fas fa-angle-double-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

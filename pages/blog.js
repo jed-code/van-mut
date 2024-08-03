@@ -25,9 +25,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -48,9 +48,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -71,9 +71,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -94,9 +94,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -117,9 +117,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -140,9 +140,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -163,9 +163,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -186,9 +186,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -209,9 +209,9 @@ const Blog = () => {
                     </Link>
                   </h4>
                   <Link href="/blog-details">
-                    <a className="read-more">
+                    <div className="read-more">
                       Read More <i className="fas fa-angle-double-right" />
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>

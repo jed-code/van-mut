@@ -71,9 +71,9 @@ export default class PhotoGallery extends Component {
                   <p>Fresh Food</p>
                 </div>
                 <Link href="/portfolio-details">
-                  <a className="details-btn">
+                  <div className="details-btn">
                     <i className="fas fa-arrow-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -85,9 +85,9 @@ export default class PhotoGallery extends Component {
                   <p>Fresh Food &amp; Vegetable</p>
                 </div>
                 <Link href="/portfolio-details">
-                  <a className="details-btn">
+                  <div className="details-btn">
                     <i className="fas fa-arrow-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -99,9 +99,9 @@ export default class PhotoGallery extends Component {
                   <p>Vegetable</p>
                 </div>
                 <Link href="/portfolio-details">
-                  <a className="details-btn">
+                  <div className="details-btn">
                     <i className="fas fa-arrow-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -113,9 +113,9 @@ export default class PhotoGallery extends Component {
                   <p>Fresh Food</p>
                 </div>
                 <Link href="/portfolio-details">
-                  <a className="details-btn">
+                  <div className="details-btn">
                     <i className="fas fa-arrow-right" />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

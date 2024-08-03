@@ -83,28 +83,20 @@ const Blogs = () => {
                   <div className="social-style-one">
                     <h6>Share Projects : </h6>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-facebook-f" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-facebook-f" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-twitter" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-twitter" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-youtube" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-youtube" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-instagram" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-instagram" />
+                      {/* </a> */}
                     </Link>
                   </div>
                 </div>
@@ -123,11 +115,11 @@ const Blogs = () => {
                     </div>
                   </div>
                   <Link href="/blog-grid">
-                    <a className="show-all">
+                    <div className="show-all">
                       <i className="far fa-ellipsis-h" />
                       <i className="far fa-ellipsis-h" />
                       <i className="far fa-ellipsis-h" />
-                    </a>
+                    </div>
                   </Link>
                   <div className="next-post wow fadeInRight delay-0-2s">
                     <div className="image">
@@ -167,9 +159,9 @@ const Blogs = () => {
                         </Link>
                       </h4>
                       <Link href="/blog-details">
-                        <a className="read-more">
+                        <div className="read-more">
                           Read More <i className="fas fa-angle-double-right" />
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -192,9 +184,9 @@ const Blogs = () => {
                         </Link>
                       </h4>
                       <Link href="/blog-details">
-                        <a className="read-more">
+                        <div className="read-more">
                           Read More <i className="fas fa-angle-double-right" />
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -217,9 +209,9 @@ const Blogs = () => {
                         </Link>
                       </h4>
                       <Link href="/blog-details">
-                        <a className="read-more">
+                        <div className="read-more">
                           Read More <i className="fas fa-angle-double-right" />
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -242,9 +234,9 @@ const Blogs = () => {
                         </Link>
                       </h4>
                       <Link href="/blog-details">
-                        <a className="read-more">
+                        <div className="read-more">
                           Read More <i className="fas fa-angle-double-right" />
-                        </a>
+                        </div>
                       </Link>
                     </div>
                   </div>
@@ -341,28 +333,20 @@ const Blogs = () => {
                   </p>
                   <div className="social-style-one">
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-facebook-f" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-facebook-f" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-twitter" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-twitter" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-youtube" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-youtube" />
+                      {/* </a> */}
                     </Link>
                     <Link href="/contact">
-                      <a>
-                        {" "}
-                        <i className="fab fa-instagram" />
-                      </a>
+                      {/* <a> */} <i className="fab fa-instagram" />
+                      {/* </a> */}
                     </Link>
                   </div>
                   <img

@@ -256,9 +256,9 @@ const PortfolioFluidIsotope = () => {
       </div>
       <div className="portfolio-more-btn text-center pt-15">
         <Link href="/portfolio-grid">
-          <a className="theme-btn style-three mt-15">
+          <div className="theme-btn style-three mt-15">
             View More <i className="fas fa-angle-double-right" />
-          </a>
+          </div>
         </Link>
       </div>
     </section>
