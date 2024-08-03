@@ -105,7 +105,7 @@ export const HomeSlider1 = () => {
             </div>
             <div className="col-lg-6">
               <div className="slider-content">
-                <div className="sub-title mb-20">Bienvenu à Van mut</div>
+                <div className="sub-title mb-20">still a demo </div>
                 <h1>Créativité &amp; Précision</h1>
                 <h6>25 Years of experience in agriculture farming</h6>
                 <div className="slider-btns mt-30">
@@ -294,7 +294,7 @@ export const HomeSlider3 = () => {
                 </p>
                 <div className="slider-btns mt-20">
                   <Link href="/produits">
-                    <div className="theme-btn style-two">
+                    <div className="theme-btn style-One">
                       Voir plus <i className="fas fa-angle-double-right" />
                     </div>
                   </Link>
@@ -310,7 +310,7 @@ export const HomeSlider3 = () => {
               <div className="slider-images">
                 <img
                   className="image"
-                  src="assets/images/slider/slider-three-1.png"
+                  src="assets/images/slider/home-slider-1.png"
                   alt="Slider"
                 />
               </div>
@@ -329,7 +329,7 @@ export const HomeSlider3 = () => {
               <div className="slider-images">
                 <img
                   className="image"
-                  src="assets/images/slider/slider-three-1.png"
+                  src="assets/images/slider/home-slider-1.png"
                   alt="Slider"
                 />
               </div>
@@ -345,7 +345,7 @@ export const HomeSlider3 = () => {
                 </p>
                 <div className="slider-btns mt-20">
                   <Link href="/produits">
-                    <div className="theme-btn style-two">
+                    <div className="theme-btn style-One">
                       Voir plus <i className="fas fa-angle-double-right" />
                     </div>
                   </Link>

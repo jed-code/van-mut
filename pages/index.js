@@ -4,6 +4,7 @@ import Layout from "../src/layout/Layout";
 import dynamic from "next/dynamic";
 import Slider from "react-slick";
 import { HomeSlider3 } from "../src/components/HomeSlider";
+import HomePageBanner from "../src/components/HomePageBanner";
 import { clientLogo } from "../src/sliderProps";
 
 const TrendyProducts = dynamic(
