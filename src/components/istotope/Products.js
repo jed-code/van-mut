@@ -119,7 +119,9 @@ const Products = ({ product }) => {
                   </span> */}
                   <div className="w-100 justify-content-center">
                     <button className="btn-success rounded text-white px-2">
-                      <a href="https://wa.me/27786578189">WhatsApp</a>
+                      <a href="https://wa.me/27786578189" target="_blank">
+                        WhatsApp
+                      </a>
                     </button>
                   </div>
                 </div>
