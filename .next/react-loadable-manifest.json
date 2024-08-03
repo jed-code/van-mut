@@ -1,4 +1,16 @@
 {
+  "..\\node_modules\\@sanity\\client\\dist\\index.browser.js -> ./_chunks-es/stegaEncodeSourceMap.js": {
+    "id": "..\\node_modules\\@sanity\\client\\dist\\index.browser.js -> ./_chunks-es/stegaEncodeSourceMap.js",
+    "files": [
+      "static/chunks/node_modules_sanity_client_dist__chunks-es_stegaEncodeSourceMap_js.js"
+    ]
+  },
+  "..\\node_modules\\@sanity\\client\\dist\\index.browser.js -> @sanity/eventsource": {
+    "id": "..\\node_modules\\@sanity\\client\\dist\\index.browser.js -> @sanity/eventsource",
+    "files": [
+      "static/chunks/node_modules_sanity_eventsource_browser_js.js"
+    ]
+  },
   "..\\src\\layout\\Footer.js -> ../components/Counter": {
     "id": "..\\src\\layout\\Footer.js -> ../components/Counter",
     "files": [
@@ -15,6 +27,12 @@
     "id": "index.js -> ../src/components/istotope/PopularProducts",
     "files": [
       "static/chunks/src_components_istotope_PopularProducts_js.js"
+    ]
+  },
+  "index.js -> ../src/components/istotope/Products": {
+    "id": "index.js -> ../src/components/istotope/Products",
+    "files": [
+      "static/chunks/src_components_istotope_Products_js.js"
     ]
   },
   "index.js -> ../src/components/istotope/TrendyProducts": {

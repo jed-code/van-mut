@@ -5,7 +5,7 @@ import { Fragment } from "react";
 const HomePageBanner = () => {
   return (
     <Fragment>
-      <div className="w-100 h-75">
+      <div className="mt-5 w-100 h-75">
         <img
           src="assets/images/banner/homePage.png"
           alt="homePageBanner"

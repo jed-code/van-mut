@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Layout from "../src/layout/Layout";
-
 import dynamic from "next/dynamic";
 import Slider from "react-slick";
 import { HomeSlider3 } from "../src/components/HomeSlider";
-import HomePageBanner from "../src/components/HomePageBanner";
+// import HomePageBanner from "../src/components/HomePageBanner";
 import { clientLogo } from "../src/sliderProps";
+
+import { useFetch } from "../lib/useFetch";
+import { allProducts } from "../lib/queries";
 
 const TrendyProducts = dynamic(
   () => import("../src/components/istotope/TrendyProducts"),
@@ -19,6 +21,11 @@ const PopularProducts = dynamic(
     ssr: false,
   }
 );
+
+const Products = dynamic(() => import("../src/components/istotope/Products"), {
+  ssr: false,
+});
+
 const MunfimCountdown = dynamic(
   () => import("../src/components/MunfimCountdown"),
   {
@@ -27,10 +34,18 @@ const MunfimCountdown = dynamic(
 );
 
 const Index = () => {
+  const {
+    data: getAllProducts,
+    error: errorAllProducts,
+    isLoading: isLoadingAllProducts,
+  } = useFetch(["allProducts"], allProducts);
+
+  console.log("...getAllProducts....", getAllProducts);
+
   return (
     <Layout header={3} footer={3}>
       <section className="slider-section slider-three">
-        <div className="slider-three-active">
+        <div className="slider-three-active ">
           <HomeSlider3 />
         </div>
       </section>
@@ -255,7 +270,7 @@ const Index = () => {
       {/* Shop Area Start */}
       <section className="shop-area-three rel z-1 py-50">
         <div className="container-fluid">
-          <PopularProducts />
+          <Products product={getAllProducts} />
         </div>
       </section>
       {/* Shop Area End */}
