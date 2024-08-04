@@ -258,7 +258,7 @@ const Produits = () => {
                           <div className="w-100 justify-content-center align-items-center">
                             <button className="btn-success rounded text-white px-2">
                               <a
-                                href="https://wa.me/27786578189"
+                                href="https://wa.me/+243980063156"
                                 target="_blank"
                               >
                                 Discuter sur WhatsApp
