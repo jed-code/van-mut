@@ -193,7 +193,7 @@ const DefaultFooter = ({ year, data }) => {
           })}
         </div>
         <div className="copyright-area pt-25 pb-10">
-          <p>Copyright © {year} van mut. Tous droits réservés</p>
+          <p>Copyright © {year} Van Mut. Tous droits réservés</p>
           <ul className="footer-menu">
             <li>
               <Link href="/contact">Paramètres &amp; confidentialité</Link>
@@ -456,7 +456,7 @@ const Footer3 = ({ year, data, galleryData }) => {
       <div className="copyright-area-wrap">
         <div className="container-fluid">
           <div className="copyright-area pt-25 pb-10">
-            <p>Copyright © {year} van mut. Tous droits réservés.</p>
+            <p>Copyright © {year} Van Mut. Tous droits réservés.</p>
             <ul className="footer-menu">
               <li>
                 <Link href="/contact">
