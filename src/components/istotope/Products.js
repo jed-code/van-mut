@@ -2,6 +2,7 @@ import Isotope from "isotope-layout";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { urlFor } from "../../../lib/sanity";
+import { FaWhatsapp } from "react-icons/fa";
 const Products = ({ product }) => {
   // Isotope
   const isotope = useRef();
@@ -100,6 +101,7 @@ const Products = ({ product }) => {
                   <img
                     src={urlFor(item?.productMainImage)?.width(150)?.url()}
                     alt="Product"
+                    className="rounded"
                   />
                 </div>
                 <div className="content">
@@ -117,11 +119,15 @@ const Products = ({ product }) => {
                     <del>{item?.price}</del>
                     <span>18</span>
                   </span> */}
-                  <div className="w-100 justify-content-center">
+                  <div className="w-100 justify-content-center align-items-center">
                     <button className="btn-success rounded text-white px-2">
                       <a href="https://wa.me/27786578189" target="_blank">
-                        WhatsApp
+                        Discuter sur WhatsApp
                       </a>
+                      <span className="mx-1"></span>
+                      <span>
+                        <FaWhatsapp size={16} />
+                      </span>
                     </button>
                   </div>
                 </div>

@@ -40,7 +40,7 @@ const Index = () => {
     isLoading: isLoadingAllProducts,
   } = useFetch(["allProducts"], allProducts);
 
-  console.log("...getAllProducts....", getAllProducts);
+  // console.log("...getAllProducts....", getAllProducts);
 
   return (
     <Layout header={3} footer={3}>
@@ -275,7 +275,7 @@ const Index = () => {
       </section>
       {/* Shop Area End */}
       {/* Special Offer Start */}
-      <section className="special-offer-three">
+      {/* <section className="special-offer-three">
         <div className="container-fluid">
           <div
             className="special-offer-three-inner rel z-1 bgs-cover py-80"
@@ -299,11 +299,6 @@ const Index = () => {
                     Shop Now <i className="fas fa-angle-double-right" />
                   </div>
                 </Link>
-                {/* <Link href="/about">
-                  <a className="theme-btn style-three">
-                    use code <i className="fas fa-angle-double-right" />
-                  </a>
-                </Link> */}
               </div>
             </div>
             <img
@@ -313,7 +308,7 @@ const Index = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
       <div className="w-100 py-3"></div>
       {/* Special Offer End */}
       {/* Shop Area Start */}
