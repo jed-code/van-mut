@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { urlFor } from "../../../lib/sanity";
 import { FaWhatsapp } from "react-icons/fa";
-const Products = ({ product }) => {
+const Products = ({ product, phoneNumber }) => {
   // Isotope
   const isotope = useRef();
   const [filterKey, setFilterKey] = useState("*");
@@ -115,17 +115,27 @@ const Products = ({ product }) => {
                     <del>{item?.price}</del>
                     <span>18</span>
                   </span> */}
-                  <div className="w-100 justify-content-center align-items-center">
-                    <button className="btn-success rounded text-white px-2">
-                      <a href="https://wa.me/+243980063156" target="_blank">
-                        Discuter sur WhatsApp
-                      </a>
-                      <span className="mx-1"></span>
-                      <span>
-                        <FaWhatsapp size={16} />
-                      </span>
-                    </button>
-                  </div>
+                  {phoneNumber?.map((item, index) => {
+                    return (
+                      <div
+                        className="w-100 justify-content-center align-items-center"
+                        key={index}
+                      >
+                        <button className="btn-success rounded text-white px-2">
+                          <a
+                            href={`https://wa.me/${item?.companyPrimaryPhoneNumber}`}
+                            target="_blank"
+                          >
+                            Discuter sur WhatsApp
+                          </a>
+                          <span className="mx-1"></span>
+                          <span>
+                            <FaWhatsapp size={16} />
+                          </span>
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

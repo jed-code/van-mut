@@ -8,6 +8,7 @@ import { clientLogo } from "../src/sliderProps";
 
 import { useFetch } from "../lib/useFetch";
 import { allProducts } from "../lib/queries";
+import { companyProfile } from "../lib/queries";
 
 const TrendyProducts = dynamic(
   () => import("../src/components/istotope/TrendyProducts"),
@@ -39,6 +40,12 @@ const Index = () => {
     error: errorAllProducts,
     isLoading: isLoadingAllProducts,
   } = useFetch(["allProducts"], allProducts);
+
+  const {
+    data: getCompanyProfile,
+    error: errorCompanyProfile,
+    isLoading: isLoadingCompanyProfile,
+  } = useFetch(["companyProfile"], companyProfile);
 
   // console.log("...getAllProducts....", getAllProducts);
 
@@ -270,7 +277,7 @@ const Index = () => {
       {/* Shop Area Start */}
       <section className="shop-area-three rel z-1 py-50">
         <div className="container-fluid">
-          <Products product={getAllProducts} />
+          <Products product={getAllProducts} phoneNumber={getCompanyProfile} />
         </div>
       </section>
       {/* Shop Area End */}

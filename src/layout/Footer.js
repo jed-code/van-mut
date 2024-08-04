@@ -7,7 +7,9 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import { client } from "../../lib/sanity";
-import { companyProfile } from "../../lib/queries";
+import { urlFor } from "../../lib/sanity";
+import { companyProfile, gallery } from "../../lib/queries";
+import { formatPhoneNumber } from "../../lib/phoneNumberFormat";
 
 const Counter = dynamic(() => import("../components/Counter"), {
   ssr: false,
@@ -33,15 +35,26 @@ const Footer = ({ footer }) => {
     error: errorCompanyProfile,
     isLoading: isLoadingCompanyProfile,
   } = useFetch(["companyProfile"], companyProfile);
+  const {
+    data: getGalleryImages,
+    error: errorGalleryImages,
+    isLoading: isLoadingGalleryImages,
+  } = useFetch(["gallery"], gallery);
 
-  console.log("getCompanyProfile...", getCompanyProfile);
+  // console.log("getCompanyProfile...", getCompanyProfile);
 
   const year = new Date().getFullYear();
   switch (footer) {
     case 1:
       return <DefaultFooter year={year} data={getCompanyProfile} />;
     case 3:
-      return <Footer3 year={year} data={getCompanyProfile} />;
+      return (
+        <Footer3
+          year={year}
+          data={getCompanyProfile}
+          galleryData={getGalleryImages}
+        />
+      );
 
     default:
       return <DefaultFooter year={year} data={getCompanyProfile} />;
@@ -65,7 +78,7 @@ const ScrollTopBtn = () => {
   );
 };
 
-const DefaultFooter = ({ year }) => {
+const DefaultFooter = ({ year, data }) => {
   return (
     <footer className="main-footer footer-black text-white">
       <div className="container">
@@ -150,28 +163,34 @@ const DefaultFooter = ({ year }) => {
               </ul>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 order-md-3">
-            <div className="footer-widget contact-widget">
-              <h4 className="footer-title">Contacter Nous</h4>
-              <p>Retrouvez-nous aux adresses suivantes :</p>
-              <ul>
-                <li>
-                  <i className="fal fa-map-marker-alt" />
-                  04 Av. du marché Q/Révolution C/Gombe ville/Kinshasa R.D.Congo
-                </li>
-                <li>
-                  <i className="far fa-envelope" />
-                  <a href="mailto:vanmutgroupe@gmail.com">
-                    vanmutgroupe@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <i className="far fa-phone" />
-                  <a href="calto:+243(81)2144542">+243 (81) 214 45 42</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          {data?.map((item, index) => {
+            return (
+              <div className="col-lg-4 col-md-6 order-md-3" key={index}>
+                <div className="footer-widget contact-widget">
+                  <h4 className="footer-title">Contacter Nous</h4>
+                  <p>Retrouvez-nous aux adresses suivantes :</p>
+                  <ul>
+                    <li>
+                      <i className="fal fa-map-marker-alt" />
+                      {item?.companyAdress}
+                    </li>
+                    <li>
+                      <i className="far fa-envelope" />
+                      <a href={`mailto:${item?.companyAdress}`}>
+                        {item?.companyAdress}
+                      </a>
+                    </li>
+                    <li>
+                      <i className="far fa-phone" />
+                      <a href={`calto:${item?.companyPrimaryPhoneNumber}`}>
+                        {formatPhoneNumber(item?.companyPrimaryPhoneNumber)}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="copyright-area pt-25 pb-10">
           <p>Copyright © {year} van mut. Tous droits réservés</p>
@@ -222,8 +241,7 @@ const DefaultFooter = ({ year }) => {
     </footer>
   );
 };
-const Footer3 = ({ year, data }) => {
-  console.log("data....", data);
+const Footer3 = ({ year, data, galleryData }) => {
   return (
     <footer className="main-footer footer-black text-white">
       <div className="container-fluid">
@@ -366,90 +384,71 @@ const Footer3 = ({ year, data }) => {
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-4 col-sm-6">
-                <div className="footer-widget contact-widget">
-                  <h4 className="footer-title">Contacter Nous</h4>
-                  <p>Retrouvez-nous aux adresses suivantes :</p>
-                  <ul>
-                    <li>
-                      <i className="fal fa-map-marker-alt" />
-                      04 Av. du marché Q/Révolution C/Gombe ville/Kinshasa
-                      R.D.Congo
-                    </li>
-                    <li>
-                      <i className="far fa-envelope" />
-                      <a href="mailto:vanmutgroupe@gmail.com">
-                        vanmutgroupe@gmail.com
-                      </a>
-                    </li>
-                    <li>
-                      <i className="far fa-phone" />
-                      <a href="calto:+243(81)2144542">+243 (81) 214 45 42</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <div className="footer-widget gallery-widget">
-                  <h4 className="footer-title">Galerie</h4>
-                  <ul>
-                    <li>
-                      <a href="assets/images/widgets/gallery1.jpg">
-                        <i className="fas fa-plus" />
-                      </a>
-                      <img
-                        src="assets/images/widgets/gallery1.jpg"
-                        alt="Gallery"
-                      />
-                    </li>
-                    <li>
-                      <a href="assets/images/widgets/gallery2.jpg">
-                        <i className="fas fa-plus" />
-                      </a>
-                      <img
-                        src="assets/images/widgets/gallery2.jpg"
-                        alt="Gallery"
-                      />
-                    </li>
-                    <li>
-                      <a href="assets/images/widgets/gallery3.jpg">
-                        <i className="fas fa-plus" />
-                      </a>
-                      <img
-                        src="assets/images/widgets/gallery3.jpg"
-                        alt="Gallery"
-                      />
-                    </li>
-                    <li>
-                      <a href="assets/images/widgets/gallery4.jpg">
-                        <i className="fas fa-plus" />
-                      </a>
-                      <img
-                        src="assets/images/widgets/gallery4.jpg"
-                        alt="Gallery"
-                      />
-                    </li>
-                    <li>
-                      <a href="assets/images/widgets/gallery5.jpg">
-                        <i className="fas fa-plus" />
-                      </a>
-                      <img
-                        src="assets/images/widgets/gallery5.jpg"
-                        alt="Gallery"
-                      />
-                    </li>
-                    <li>
-                      <a href="assets/images/widgets/gallery6.jpg">
-                        <i className="fas fa-plus" />
-                      </a>
-                      <img
-                        src="assets/images/widgets/gallery6.jpg"
-                        alt="Gallery"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              {data?.map((item, index) => {
+                return (
+                  <div className="col-lg-4 col-sm-6" key={index}>
+                    <div className="footer-widget contact-widget">
+                      <h4 className="footer-title">Contacter Nous</h4>
+                      <p>Retrouvez-nous aux adresses suivantes :</p>
+                      <ul>
+                        <li>
+                          <i className="fal fa-map-marker-alt" />
+                          {item?.companyAdress}
+                        </li>
+                        <li>
+                          <i className="far fa-envelope" />
+                          <a href={`mailto:${item?.companyAdress}`}>
+                            {item?.companyAdress}
+                          </a>
+                        </li>
+                        <li>
+                          <i className="far fa-phone" />
+                          <a href={`calto:${item?.companyPrimaryPhoneNumber}`}>
+                            {formatPhoneNumber(item?.companyPrimaryPhoneNumber)}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
+              {galleryData?.map((item, index) => {
+                return (
+                  <div className="col-lg-4 col-sm-6" key={index}>
+                    <div className="footer-widget gallery-widget">
+                      <h4 className="footer-title">Galerie</h4>
+                      <ul>
+                        {item?.image?.map((gallery, index) => {
+                          return (
+                            <li key={index}>
+                              <a
+                              // href={urlFor(gallery)?.width(150)?.url()}
+                              // href="#"
+                              >
+                                <i className="fas fa-plus" />
+                              </a>
+                              <img
+                                src={urlFor(gallery)?.width(150)?.url()}
+                                alt="Gallery"
+                              />
+                            </li>
+                          );
+                        })}
+
+                        {/* <li>
+                          <a href="assets/images/widgets/gallery6.jpg">
+                            <i className="fas fa-plus" />
+                          </a>
+                          <img
+                            src="assets/images/widgets/gallery6.jpg"
+                            alt="Gallery"
+                          />
+                        </li> */}
+                      </ul>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
