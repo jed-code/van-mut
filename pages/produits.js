@@ -2,7 +2,23 @@ import Link from "next/link";
 import PageBanner from "../src/components/PageBanner";
 import Pagination from "../src/components/Pagination";
 import Layout from "../src/layout/Layout";
+import { urlFor } from "../lib/sanity";
+import { useFetch } from "../lib/useFetch";
+import { allCategories, allProducts } from "../lib/queries";
+import { FaWhatsapp } from "react-icons/fa";
+
 const Produits = () => {
+  const {
+    data: getAllProducts,
+    error: errorAllProducts,
+    isLoading: isLoadingAllProducts,
+  } = useFetch(["allProducts"], allProducts);
+  const {
+    data: getAllCategory,
+    error: errorAllCategory,
+    isLoading: isLoadingAllCategory,
+  } = useFetch(["allCategory"], allCategories);
+
   return (
     <Layout>
       <PageBanner pageName={"Nos Produits"} />
@@ -15,7 +31,7 @@ const Produits = () => {
                   <form onSubmit={(e) => e.preventDefault()} action="#">
                     <input
                       type="text"
-                      placeholder="Search keywords"
+                      placeholder="Rechercher..."
                       required=""
                     />
                     <button
@@ -27,15 +43,15 @@ const Produits = () => {
                 <div className="widget widget-menu wow fadeInUp delay-0-4s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
-                    Category
+                    Categories
                   </h4>
                   <ul>
                     <li>
-                      <Link href="/shop-grid">Organic Fruits</Link>{" "}
+                      <Link href="/produits">Organic Fruits</Link>{" "}
                       <span>(8)</span>
                     </li>
                     <li>
-                      <Link href="/shop-grid">Fresh Vegetables</Link>{" "}
+                      <Link href="/produits">Fresh Vegetables</Link>{" "}
                       <span>(5)</span>
                     </li>
                     <li>
@@ -55,7 +71,7 @@ const Produits = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="widget widget-menu wow fadeInUp delay-0-2s">
+                {/* <div className="widget widget-menu wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
                     Filter By Pricing
@@ -86,8 +102,8 @@ const Produits = () => {
                       <span>(289)</span>
                     </li>
                   </ul>
-                </div>
-                <div className="widget widget-products wow fadeInUp delay-0-2s">
+                </div> */}
+                {/* <div className="widget widget-products wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
                     Best Seller
@@ -178,8 +194,8 @@ const Produits = () => {
                       </div>
                     </li>
                   </ul>
-                </div>
-                <div className="widget widget-tag-cloud wow fadeInUp delay-0-2s">
+                </div> */}
+                {/* <div className="widget widget-tag-cloud wow fadeInUp delay-0-2s">
                   <h4 className="widget-title">
                     <i className="flaticon-leaf-1" />
                     Popular Tags
@@ -192,12 +208,12 @@ const Produits = () => {
                     <Link href="/shop-grid">Fruits</Link>
                     <Link href="/shop-grid">Sea Foods</Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-xl-9 col-lg-8 mt-55">
               <div className="shop-shorter rel z-3 pt-10 mb-40 wow fadeInUp delay-0-2s">
-                <div className="products-dropdown">
+                {/* <div className="products-dropdown">
                   <select>
                     <option value="default" selected="">
                       Best Selling
@@ -207,8 +223,8 @@ const Produits = () => {
                     <option value="hight-to-low">High To Low</option>
                     <option value="low-to-high">Low To High</option>
                   </select>
-                </div>
-                <ul className="grid-list">
+                </div> */}
+                {/* <ul className="grid-list">
                   <li>
                     <a href="#">
                       <i className="fas fa-border-all" />
@@ -219,37 +235,62 @@ const Produits = () => {
                       <i className="fas fa-bars" />
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
               <div className="row shop-left-sidebar-row">
-                <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6">
-                  <div className="product-item wow fadeInUp delay-0-2s">
-                    <span className="offer">53 Off</span>
-                    <div className="image">
-                      <img
-                        src="assets/images/products/product1.png"
-                        alt="Product"
-                      />
-                    </div>
-                    <div className="content">
-                      <div className="ratting">
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
-                        <i className="fas fa-star" />
+                {getAllProducts?.map((item, index) => {
+                  return (
+                    <div
+                      className="col-xl-4 col-lg-6 col-md-4 col-sm-6"
+                      key={index}
+                    >
+                      <div className="product-item wow fadeInUp delay-0-2s">
+                        <span className="offer">53 Off</span>
+                        <div className="image">
+                          <img
+                            src={urlFor(item?.productMainImage)
+                              ?.width(150)
+                              ?.url()}
+                            alt="Product"
+                            className="rounded"
+                          />
+                        </div>
+                        <div className="content">
+                          {/* <div className="ratting">
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                            <i className="fas fa-star" />
+                          </div> */}
+                          <h5>
+                            <Link href="/product-details">{item?.name}</Link>
+                          </h5>
+                          {/* <span className="price">
+                            <del>25</del>
+                            <span>18</span>
+                          </span> */}
+                          <div className="w-100 justify-content-center align-items-center">
+                            <button className="btn-success rounded text-white px-2">
+                              <a
+                                href="https://wa.me/27786578189"
+                                target="_blank"
+                              >
+                                Discuter sur WhatsApp
+                              </a>
+                              <span className="mx-1"></span>
+                              <span>
+                                <FaWhatsapp size={16} />
+                              </span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <h5>
-                        <Link href="/product-details">Organic Brocolli</Link>
-                      </h5>
-                      <span className="price">
-                        <del>25</del>
-                        <span>18</span>
-                      </span>
                     </div>
-                  </div>
-                </div>
-                <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6">
+                  );
+                })}
+
+                {/* <div className="col-xl-4 col-lg-6 col-md-4 col-sm-6">
                   <div className="product-item wow fadeInUp delay-0-4s">
                     <div className="image">
                       <img
@@ -533,14 +574,14 @@ const Produits = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <ul className="pagination flex-wrap justify-content-center pt-10">
+              {/* <ul className="pagination flex-wrap justify-content-center pt-10">
                 <Pagination
                   paginationCls={".shop-left-sidebar-row .col-xl-4"}
                   defaultSort={6}
                 />
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

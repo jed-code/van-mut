@@ -87,10 +87,6 @@ const Products = ({ product }) => {
       </div>
       <div className="row popular-products-active">
         {product?.map((item, index) => {
-          console.log(
-            "item?.productMainImage?.asset?._ref.....",
-            item?.productMainImage?.asset?._ref
-          );
           return (
             <div
               className="col-xl-3 col-lg-4 col-sm-6 item seafish vegetables"
