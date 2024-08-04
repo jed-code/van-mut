@@ -46,29 +46,14 @@ const Produits = () => {
                     Categories
                   </h4>
                   <ul>
-                    <li>
-                      <Link href="/produits">Organic Fruits</Link>{" "}
-                      <span>(8)</span>
-                    </li>
-                    <li>
-                      <Link href="/produits">Fresh Vegetables</Link>{" "}
-                      <span>(5)</span>
-                    </li>
-                    <li>
-                      <Link href="/shop-grid">Crisp Bread &amp; Cake</Link>{" "}
-                      <span>(3)</span>
-                    </li>
-                    <li>
-                      <Link href="/shop-grid">Sea Foods</Link> <span>(9)</span>
-                    </li>
-                    <li>
-                      <Link href="/shop-grid">Chiken Eggs</Link>{" "}
-                      <span>(4)</span>
-                    </li>
-                    <li>
-                      <Link href="/shop-grid">Milk &amp; Meat</Link>{" "}
-                      <span>(6)</span>
-                    </li>
+                    {getAllCategory?.map((catagory, index) => {
+                      return (
+                        <li key={index}>
+                          <Link href="/produits">{catagory?.title}</Link>{" "}
+                          {/* <span>(8)</span> */}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 {/* <div className="widget widget-menu wow fadeInUp delay-0-2s">
@@ -245,7 +230,7 @@ const Produits = () => {
                       key={index}
                     >
                       <div className="product-item wow fadeInUp delay-0-2s">
-                        <span className="offer">53 Off</span>
+                        {/* <span className="offer">53 Off</span> */}
                         <div className="image">
                           <img
                             src={urlFor(item?.productMainImage)
