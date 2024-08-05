@@ -52,16 +52,16 @@ const Products = ({ product, phoneNumber }) => {
               className={`c-pointer ${activeBtn("*")}`}
               onClick={handleFilterKeyChange("*")}
             >
-              Show All
+              Voir Plus
             </li>
             <li
               data-filter=".vegetables"
               className={`c-pointer ${activeBtn("vegetables")}`}
               onClick={handleFilterKeyChange("vegetables")}
             >
-              Vegetables
+              Impression
             </li>
-            <li
+            {/* <li
               data-filter=".fruits"
               className={`c-pointer ${activeBtn("fruits")}`}
               onClick={handleFilterKeyChange("fruits")}
@@ -81,7 +81,7 @@ const Products = ({ product, phoneNumber }) => {
               onClick={handleFilterKeyChange("seafish")}
             >
               Sea Fish
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

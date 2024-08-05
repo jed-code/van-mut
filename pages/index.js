@@ -7,8 +7,10 @@ import { HomeSlider3 } from "../src/components/HomeSlider";
 import { clientLogo } from "../src/sliderProps";
 
 import { useFetch } from "../lib/useFetch";
+import { urlFor } from "../lib/sanity";
 import { allProducts } from "../lib/queries";
 import { companyProfile } from "../lib/queries";
+import { homeSection2 } from "../lib/queries";
 
 const TrendyProducts = dynamic(
   () => import("../src/components/istotope/TrendyProducts"),
@@ -47,7 +49,13 @@ const Index = () => {
     isLoading: isLoadingCompanyProfile,
   } = useFetch(["companyProfile"], companyProfile);
 
-  // console.log("...getAllProducts....", getAllProducts);
+  const {
+    data: getSection2,
+    error: errorSection2,
+    isLoading: isLoadingSection2,
+  } = useFetch(["homeSection2"], homeSection2);
+
+  console.log("...getSection2....", getSection2);
 
   return (
     <Layout header={3} footer={3}>
@@ -113,63 +121,79 @@ const Index = () => {
       <section className="offer-banners-two pb-20">
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-xl-4 col-md-6">
-              <div
-                className="offer-banner-item style-two wow fadeInUp delay-0-2s"
-                style={{
-                  backgroundImage:
-                    "url(assets/images/offers/offer-banner-bg4.jpg)",
-                }}
-              >
-                <div className="content mb-0 ml-auto">
-                  <span className="sub-title">100% Fresh</span>
-                  <h3>Vegetables</h3>
-                  <Link href="/shop-grid">
-                    <div className="theme-btn style-three">
-                      Voir Plus <i className="fas fa-angle-double-right" />
+            {getSection2?.map((item, index) => {
+              const section1 = urlFor(item?.section1)?.url();
+              return (
+                <div className="col-xl-4 col-md-6" key={index}>
+                  <div
+                    className="offer-banner-item style-two wow fadeInUp delay-0-2s"
+                    style={{
+                      backgroundImage: `url(${section1})`,
+                    }}
+                  >
+                    {/* src={urlFor(item?.productMainImage)?.width(150)?.url()} */}
+                    <div className="content mb-0 ml-auto">
+                      <span className="sub-title">{item?.meta_section1}</span>
+                      <h3>{item?.title_section1}</h3>
+                      <Link href="/produits">
+                        <div className="theme-btn style-three">
+                          Voir Plus <i className="fas fa-angle-double-right" />
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div
-                className="offer-banner-item style-two wow fadeInUp delay-0-4s"
-                style={{
-                  backgroundImage:
-                    "url(assets/images/offers/offer-banner-bg5.jpg)",
-                }}
-              >
-                <div className="content mb-0">
-                  <span className="sub-title">25% Off</span>
-                  <h3>Fast Delivery</h3>
-                  <Link href="/shop-grid">
-                    <div className="theme-btn style-three">
-                      Voir Plus <i className="fas fa-angle-double-right" />
+              );
+            })}
+            {getSection2?.map((item, index) => {
+              const section2 = urlFor(item?.section2)?.url();
+              const section3 = urlFor(item?.section3)?.url();
+              return (
+                <div className="col-xl-4 col-md-6" key={index}>
+                  <div
+                    className="offer-banner-item style-two wow fadeInUp delay-0-2s"
+                    style={{
+                      backgroundImage: `url(${section2})`,
+                    }}
+                  >
+                    {/* src={urlFor(item?.productMainImage)?.width(150)?.url()} */}
+                    <div className="content mb-0 ml-auto">
+                      <span className="sub-title">{item?.meta_section2}</span>
+                      <h3>{item?.title_section2}</h3>
+                      <Link href="/produits">
+                        <div className="theme-btn style-three">
+                          Voir Plus <i className="fas fa-angle-double-right" />
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div
-                className="offer-banner-item style-two wow fadeInUp delay-0-4s"
-                style={{
-                  backgroundImage:
-                    "url(assets/images/offers/offer-banner-bg6.jpg)",
-                }}
-              >
-                <div className="content mb-0">
-                  <span className="sub-title">100% Fresh</span>
-                  <h3>Organic Fruits</h3>
-                  <Link href="/shop-grid">
-                    <div className="theme-btn style-three">
-                      Voir Plus <i className="fas fa-angle-double-right" />
+              );
+            })}
+            {getSection2?.map((item, index) => {
+              const section3 = urlFor(item?.section3)?.url();
+              return (
+                <div className="col-xl-4 col-md-6" key={index}>
+                  <div
+                    className="offer-banner-item style-two wow fadeInUp delay-0-2s"
+                    style={{
+                      backgroundImage: `url(${section3})`,
+                    }}
+                  >
+                    {/* src={urlFor(item?.productMainImage)?.width(150)?.url()} */}
+                    <div className="content mb-0 ml-auto">
+                      <span className="sub-title">{item?.meta_section3}</span>
+                      <h3>{item?.title_section3}</h3>
+                      <Link href="/produits">
+                        <div className="theme-btn style-three">
+                          Voir Plus <i className="fas fa-angle-double-right" />
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
