@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import munfirmSlider from "../munfirmSlider";
+import { urlFor } from "../../lib/sanity";
 export const HomeSlider1 = () => {
   const { active, setActive } = munfirmSlider();
   return (
@@ -265,7 +266,7 @@ export const HomeSlider2 = () => {
     </Fragment>
   );
 };
-export const HomeSlider3 = () => {
+export const HomeSlider3 = ({ data }) => {
   const { active, setActive } = munfirmSlider();
   return (
     <Fragment>
@@ -275,91 +276,95 @@ export const HomeSlider3 = () => {
       >
         <i className="fas fa-chevron-left" />
       </button>
+      {data?.map((item, i) => {
+        return (
+          <div
+            className={`slider-single-item style-three slide-one ${
+              active == 1 ? "slick-active" : ""
+            }`}
+            key={i}
+          >
+            <div className="container-fluid">
+              <div className="row align-items-center">
+                <div className="col-xl-5">
+                  <div className="slider-content">
+                    <div className="sub-title mb-20">{item?.meta_section1}</div>
+                    <h1> {item?.title_section1}</h1>
+                    <p>{item?.description_section1}</p>
+                    <div className="slider-btns mt-20">
+                      <Link href="/produits">
+                        <div className="theme-btn style-One">
+                          Voir plus <i className="fas fa-angle-double-right" />
+                        </div>
+                      </Link>
+                      {/* <Link href="/about">
+                    <a className="theme-btn style-three">
+                      Learn More <i className="fas fa-angle-double-right" />
+                    </a>
+                  </Link> */}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-7 col-lg-9">
+                  <div className="slider-images">
+                    <img
+                      className="image"
+                      src={urlFor(item?.imageSection1)?.url()}
+                      // src="assets/images/slider/home-slider-1.png"
+                      alt="Slider"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
 
-      <div
-        className={`slider-single-item style-three slide-one ${
-          active == 1 ? "slick-active" : ""
-        }`}
-      >
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-xl-5">
-              <div className="slider-content">
-                <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Créativité &amp; Précision</h1>
-                <p>
-                  Transformez vos idées en chefs-d'œuvre avec Van Mut, où notre
-                  équipe fusionne créativité et précision pour des impressions
-                  exceptionnelles.
-                </p>
-                <div className="slider-btns mt-20">
-                  <Link href="/produits">
-                    <div className="theme-btn style-One">
-                      Voir plus <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                  {/* <Link href="/about">
+      {data?.map((item, i) => {
+        return (
+          <div
+            className={`slider-single-item style-three slide-two ${
+              active == 2 ? "slick-active" : ""
+            }`}
+            key={i}
+          >
+            <div className="container-fluid">
+              <div className="row align-items-center">
+                <div className="col-xl-7 col-lg-9">
+                  <div className="slider-images">
+                    <img
+                      className="image"
+                      src={urlFor(item?.imageSection2)?.url()}
+                      alt="Slider"
+                    />
+                  </div>
+                </div>
+                <div className="col-xl-5">
+                  <div className="slider-content">
+                    <div className="sub-title mb-20">{item?.meta_section2}</div>
+                    <h1>{item?.title_section2}</h1>
+                    <p>{item?.description_section2}</p>
+                    <div className="slider-btns mt-20">
+                      <Link href="/produits">
+                        <div className="theme-btn style-One">
+                          Voir plus <i className="fas fa-angle-double-right" />
+                        </div>
+                      </Link>
+                      {/* <Link href="/about">
                     <a className="theme-btn style-three">
                       Learn More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link> */}
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-7 col-lg-9">
-              <div className="slider-images">
-                <img
-                  className="image"
-                  src="assets/images/slider/home-slider-1.png"
-                  alt="Slider"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={`slider-single-item style-three slide-two ${
-          active == 2 ? "slick-active" : ""
-        }`}
-      >
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-xl-7 col-lg-9">
-              <div className="slider-images">
-                <img
-                  className="image"
-                  src="assets/images/slider/home-slider-1.png"
-                  alt="Slider"
-                />
-              </div>
-            </div>
-            <div className="col-xl-5">
-              <div className="slider-content">
-                <div className="sub-title mb-20">Bienvenu à Van mut</div>
-                <h1>Créativité &amp; Précision</h1>
-                <p>
-                  Transformez vos idées en chefs-d'œuvre avec Van Mut, où notre
-                  équipe fusionne créativité et précision pour des impressions
-                  exceptionnelles.
-                </p>
-                <div className="slider-btns mt-20">
-                  <Link href="/produits">
-                    <div className="theme-btn style-One">
-                      Voir plus <i className="fas fa-angle-double-right" />
                     </div>
-                  </Link>
-                  {/* <Link href="/about">
-                    <a className="theme-btn style-three">
-                      Learn More <i className="fas fa-angle-double-right" />
-                    </a>
-                  </Link> */}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
+
       <button
         className="slider-next slick-arrow"
         onClick={() => setActive(active == 2 ? 1 : 2)}

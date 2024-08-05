@@ -10,6 +10,7 @@ import { useFetch } from "../lib/useFetch";
 import { urlFor } from "../lib/sanity";
 import { allProducts } from "../lib/queries";
 import { companyProfile } from "../lib/queries";
+import { homeSection1 } from "../lib/queries";
 import { homeSection2 } from "../lib/queries";
 
 const TrendyProducts = dynamic(
@@ -50,18 +51,22 @@ const Index = () => {
   } = useFetch(["companyProfile"], companyProfile);
 
   const {
+    data: getSection1,
+    error: errorSection1,
+    isLoading: isLoadingSection1,
+  } = useFetch(["homeSection1"], homeSection1);
+
+  const {
     data: getSection2,
     error: errorSection2,
     isLoading: isLoadingSection2,
   } = useFetch(["homeSection2"], homeSection2);
 
-  console.log("...getSection2....", getSection2);
-
   return (
     <Layout header={3} footer={3}>
       <section className="slider-section slider-three">
         <div className="slider-three-active ">
-          <HomeSlider3 />
+          <HomeSlider3 data={getSection1} />
         </div>
       </section>
       {/* Slider Section End */}
