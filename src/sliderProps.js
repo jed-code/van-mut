@@ -46,7 +46,7 @@ export const clientLogo = {
   autoplaySpeed: 2000,
   arrows: false,
   speed: 1000,
-  slidesToShow: 6,
+  slidesToShow: 5,
   slidesToScroll: 1,
   responsive: [
     {

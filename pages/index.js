@@ -12,6 +12,7 @@ import { allProducts } from "../lib/queries";
 import { companyProfile } from "../lib/queries";
 import { homeSection1 } from "../lib/queries";
 import { homeSection2 } from "../lib/queries";
+import { clients } from "../lib/queries";
 
 const TrendyProducts = dynamic(
   () => import("../src/components/istotope/TrendyProducts"),
@@ -61,6 +62,14 @@ const Index = () => {
     error: errorSection2,
     isLoading: isLoadingSection2,
   } = useFetch(["homeSection2"], homeSection2);
+
+  const {
+    data: getClients,
+    error: errorClients,
+    isLoading: isLoadingClients,
+  } = useFetch(["clients"], clients);
+
+  // console.log("images....", );
 
   return (
     <Layout header={3} footer={3}>
@@ -355,132 +364,110 @@ const Index = () => {
       </section> */}
       {/* Shop Area End */}
       {/* Client Logo Area Start */}
-      <div className="client-logo-area-two text-center mb-80">
-        <div className="container-fluid">
-          <div className="bg-lighter-two overflow-hidden rel z-1 px-sm-4 px-2">
-            <Slider {...clientLogo} className="client-logo-wrap py-60">
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-1.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-2.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-3.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-4.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-5.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-6.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-1.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-2.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-3.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-4.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-5.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-              <div className="client-logo-item color-hover">
-                <Link href="/contact">
-                  {/* <a> */}
-                  <img
-                    src="assets/images/client-logo/client-logo-two-6.png"
-                    alt="Client Logo"
-                  />
-                  {/* </a> */}
-                </Link>
-              </div>
-            </Slider>
-            <div className="client-logo-shapes">
+      {getClients?.map((client, i) => {
+        return (
+          <div className="client-logo-area-two text-center mb-80" key={i}>
+            <div className="container-fluid">
+              <div className="bg-lighter-two overflow-hidden rel z-1 px-sm-4 px-2">
+                <Slider {...clientLogo} className="client-logo-wrap py-60">
+                  {client?.image?.map((item, i) => {
+                    return (
+                      <div className="client-logo-item" key={i}>
+                        <img src={urlFor(item)?.url()} alt="Client-Logo" />
+                      </div>
+                    );
+                  })}
+
+                  {/* <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-2.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-3.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-4.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-5.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-6.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-1.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-2.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-3.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-4.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-5.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div>
+                  <div className="client-logo-item color-hover">
+                    <Link href="/contact">
+                      <img
+                        src="assets/images/client-logo/client-logo-two-6.png"
+                        alt="Client Logo"
+                      />
+                    </Link>
+                  </div> */}
+                </Slider>
+                {/* <div className="client-logo-shapes">
               <img
                 className="shape-one"
                 src="assets/images/shapes/cl-shape-two1.png"
@@ -511,10 +498,12 @@ const Index = () => {
                 src="assets/images/shapes/cl-shape-two6.png"
                 alt="Shape"
               />
+            </div> */}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </Layout>
   );
 };
