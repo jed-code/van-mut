@@ -576,7 +576,8 @@ a.theme-btn.btn-white {
   text-align: center;
 }
 .social-style-two a:hover {
-  background: #fddc1a;
+  background: #007bff;
+  color:#fff
 }
 .social-style-two a:not(:first-child) {
   margin-left: 5px;

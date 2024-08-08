@@ -3,7 +3,22 @@ import Slider from "react-slick";
 import PageBanner from "../src/components/PageBanner";
 import Layout from "../src/layout/Layout";
 import { newsSlider } from "../src/sliderProps";
+import { clients } from "../lib/queries";
+import { urlFor } from "../lib/sanity";
+import { useFetch } from "../lib/useFetch";
+import { blogPost } from "../lib/queries";
+
+import { IoBookOutline } from "react-icons/io5";
+
 const BlogDetails = () => {
+  // const {
+  //   data: getAllPost,
+  //   error: errorAllPosts,
+  //   isLoading: isLoadingAllPost,
+  // } = useFetch(["allPost"], blogPost);
+
+  // console.log("getAllPost....", getAllPost);
+
   return (
     <Layout>
       <PageBanner pageName={"Blog Details"} />
@@ -13,14 +28,14 @@ const BlogDetails = () => {
             <div className="col-xl-8 mt-65">
               <div className="blog-details-content">
                 <ul className="blog-meta">
-                  <li>
+                  <li className="text-primary">
                     <i className="far fa-calendar-alt" />
-                    <a href="#">Mar 25, 2022</a>
+                    <a className="text-primary">Mar 25, 2022</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <i className="far fa-comment-dots" />
                     <a href="#">Comments (5k)</a>
-                  </li>
+                  </li> */}
                 </ul>
                 <h3 className="title">
                   Unicode UTF8 &amp; Character Sets The Sltimate Guide Systems
@@ -326,27 +341,23 @@ const BlogDetails = () => {
                     <img src="assets/images/widgets/about.jpg" alt="Author" />
                   </div>
                   <h4>Somalia D. Silva</h4>
-                  <span className="sub-title">CO-Founder</span>
+                  <span className="sub-title text-primary">CO-Founder</span>
                   <p>
                     Amet consecte adipiscing elitse doeiusmod tempor incididunt
                     labre et dolore magna aliqua lacus{" "}
                   </p>
-                  <div className="social-style-one">
+                  <div className="social-style-two">
                     <Link href="/contact">
-                      {/* <a> */} <i className="fab fa-facebook-f" />
-                      {/* </a> */}
+                      <i className="fab fa-facebook-f" />
                     </Link>
                     <Link href="/contact">
-                      {/* <a> */} <i className="fab fa-twitter" />
-                      {/* </a> */}
+                      <i className="fab fa-twitter" />
                     </Link>
                     <Link href="/contact">
-                      {/* <a> */} <i className="fab fa-youtube" />
-                      {/* </a> */}
+                      <i className="fab fa-youtube" />
                     </Link>
                     <Link href="/contact">
-                      {/* <a> */} <i className="fab fa-instagram" />
-                      {/* </a> */}
+                      <i className="fab fa-instagram" />
                     </Link>
                   </div>
                   <img
@@ -355,49 +366,13 @@ const BlogDetails = () => {
                     className="bg"
                   />
                 </div>
-                <div className="widget widget-search wow fadeInUp delay-0-2s">
-                  <form onSubmit={(e) => e.preventDefault()} action="#">
-                    <input
-                      type="text"
-                      placeholder="Search keywords"
-                      required=""
-                    />
-                    <button
-                      type="submit"
-                      className="searchbutton fa fa-search"
-                    />
-                  </form>
-                </div>
-                <div className="widget widget-menu wow fadeInUp delay-0-4s">
-                  <h4 className="widget-title">
-                    <i className="flaticon-leaf-1" />
-                    Category
-                  </h4>
-                  <ul>
-                    <li>
-                      <Link href="/blog-grid">Organic Fruits</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-grid">Fresh Vegetables</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-grid">Crisp Bread &amp; Cake</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-grid">Sea Foods</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-grid">Chiken Eggs</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog-grid">Milk &amp; Meat</Link>
-                    </li>
-                  </ul>
-                </div>
+
                 <div className="widget widget-news wow fadeInUp delay-0-2s">
-                  <h4 className="widget-title">
-                    <i className="flaticon-leaf-1" />
-                    Recent News
+                  <h4 className="widget-title d-flex align-items-center">
+                    <span className="mx-1 text-primary">
+                      <IoBookOutline Size={13} />
+                    </span>
+                    Articles Récents
                   </h4>
                   <ul>
                     <li>
@@ -449,20 +424,6 @@ const BlogDetails = () => {
                       </div>
                     </li>
                   </ul>
-                </div>
-                <div className="widget widget-tag-cloud wow fadeInUp delay-0-2s">
-                  <h4 className="widget-title">
-                    <i className="flaticon-leaf-1" />
-                    Popular Tags
-                  </h4>
-                  <div className="tag-coulds">
-                    <Link href="/blog-grid">Farming</Link>
-                    <Link href="/blog-grid">Organic</Link>
-                    <Link href="/blog-grid">Vegetables</Link>
-                    <Link href="/blog-grid">Fresh Food</Link>
-                    <Link href="/blog-grid">Fruits</Link>
-                    <Link href="/blog-grid">Sea Foods</Link>
-                  </div>
                 </div>
               </div>
             </div>

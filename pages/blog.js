@@ -2,227 +2,60 @@ import Link from "next/link";
 import PageBanner from "../src/components/PageBanner";
 import Pagination from "../src/components/Pagination";
 import Layout from "../src/layout/Layout";
+import { urlFor } from "../lib/sanity";
+import { useFetch } from "../lib/useFetch";
+import { blogPost } from "../lib/queries";
+import { dateFunc } from "../lib/dateFunc";
+
 const Blog = () => {
+  const {
+    data: getAllPost,
+    error: errorAllPosts,
+    isLoading: isLoadingAllPost,
+  } = useFetch(["allPost"], blogPost);
+
+  // console.log("getAllPost....", getAllPost);
+
   return (
     <Layout>
       <PageBanner pageName={"Blog"} />
       <section className="news-page-section rel z-1 py-130 rpy-100">
         <div className="container">
           <div className="row justify-content-center blog-grid">
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-2s">
-                <div className="image">
-                  <img src="assets/images/news/news1.jpg" alt="News" />
-                  <span className="date">
-                    <b>25</b> July
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Vegetable</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Unicode UTF8 Character Sets They Sltimate Guide Systems
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
+            {getAllPost?.map((item, i) => {
+              const { jour, mois } = dateFunc(item?.date);
+              console.log("item...", item);
+              return (
+                <div className="col-xl-4 col-md-6" key={i}>
+                  <div className="news-item wow fadeInUp delay-0-2s">
+                    <div className="image">
+                      <img src={urlFor(item?.image)?.url()} alt="News" />
+                      <span className="date">
+                        <b> {jour}</b> {mois}
+                      </span>
                     </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-4s">
-                <div className="image">
-                  <img src="assets/images/news/news2.jpg" alt="News" />
-                  <span className="date">
-                    <b>28</b> July
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Farming</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Quality Foods Requirments For Every Human Body’s
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
+                    <div className="content">
+                      {/* <span className="sub-title">Vegetable</span> */}
+                      <h4>
+                        <Link href="/blog-details">{item?.title}</Link>
+                      </h4>
+                      <Link href="/blog-details">
+                        <div className="read-more">
+                          Voir Plus <i className="fas fa-angle-double-right" />
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-6s">
-                <div className="image">
-                  <img src="assets/images/news/news3.jpg" alt="News" />
-                  <span className="date">
-                    <b>30</b> July
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Organic Fruits</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Choose Awesome Vegetables For Your Daily Life Routine
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-2s">
-                <div className="image">
-                  <img src="assets/images/news/news4.jpg" alt="News" />
-                  <span className="date">
-                    <b>06</b> Nov
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Vegetable</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Unicode UTF8 Character Sets They Sltimate Guide Systems
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-4s">
-                <div className="image">
-                  <img src="assets/images/news/news5.jpg" alt="News" />
-                  <span className="date">
-                    <b>03</b> Sep
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Farming</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Quality Foods Requirments For Every Human Body’s
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-6s">
-                <div className="image">
-                  <img src="assets/images/news/news6.jpg" alt="News" />
-                  <span className="date">
-                    <b>09</b> Sep
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Organic Fruits</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Choose Awesome Vegetables For Your Daily Life Routine
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-2s">
-                <div className="image">
-                  <img src="assets/images/news/news7.jpg" alt="News" />
-                  <span className="date">
-                    <b>06</b> Nov
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Vegetable</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Unicode UTF8 Character Sets They Sltimate Guide Systems
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-4s">
-                <div className="image">
-                  <img src="assets/images/news/news8.jpg" alt="News" />
-                  <span className="date">
-                    <b>03</b> Sep
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Farming</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Quality Foods Requirments For Every Human Body’s
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="news-item wow fadeInUp delay-0-6s">
-                <div className="image">
-                  <img src="assets/images/news/news9.jpg" alt="News" />
-                  <span className="date">
-                    <b>06</b> Sep
-                  </span>
-                </div>
-                <div className="content">
-                  <span className="sub-title">Organic Fruits</span>
-                  <h4>
-                    <Link href="/blog-details">
-                      Choose Awesome Vegetables For Your Daily Life Routine
-                    </Link>
-                  </h4>
-                  <Link href="/blog-details">
-                    <div className="read-more">
-                      Read More <i className="fas fa-angle-double-right" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
-          <ul className="pagination justify-content-center flex-wrap">
+          {/* <ul className="pagination justify-content-center flex-wrap">
             <Pagination
               paginationCls={".blog-grid .col-xl-4"}
               defaultSort={6}
             />
-          </ul>
+          </ul> */}
         </div>
         <div className="news-shapes">
           <img
